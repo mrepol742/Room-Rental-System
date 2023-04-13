@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/MavenPro.woff2") format('woff2');
+}
+
+* {
+    font-family: 'Maven Pro', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #4285f4;
+}
+
+.hna {
+    background-color: #4285f4;
+    color: #fff;
+    border-radius: 5px;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    border: none;
+    text-align: center;
+    transition: all 1s ease;
+}
+
+.hna:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-brand,
+.nav-link {
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #4285f4;
+}
+
+@media (max-width:1080px) {
+
+    nav {
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 9999;
+    }
+
+    .anh {
+        background-color: #fff;
+        color: #4285f4;
+        border-radius: 5px;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        margin-top: 20px !important;
+        border: none;
+        text-align: center;
+        transition: all 1s ease;
+    }
+
+    .anh:hover {
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    hr {
+        margin-left: 20% !important;
+        margin-right: 20% !important;
+        color: #ffffffc5;
+    }
+
+    footer {
+        padding-top: 15% !important;
+        padding-bottom: 8% !important;
+    }
+}
+
+
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    margin-top: 10%;
+    color: #fff;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.sidebar {
+    margin-right: 10px;
+}
+
+ #qwe {
+    background-image: url("/chevron-down.svg");
+    background-size: 100%;
+    background-position: center center;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    transition: all 1s ease;
+}
+
+#qwe111 {
+    border: none;
+}
+
+.offcanvas {
+    z-index: 99999;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-bottom: 3%;
+    border: none;
+    transition: all 0.4s ease;
+}
+
+.menu {
+    list-style-type: none;
+    text-align: left;
+}
+
+.menuitem {
+   padding: 7px !important;
+   margin-left: -9% !important;
+   border-radius: 7px;
+   border: none;
+   transition: all 0.5s ease;
+}
+
+.menuitem:hover {
+    background: rgba(0, 0, 0, 0.3);
+ }
+
+.menuitem a{
+    color: #000 !important;
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    border: none;
+    background-color: #4285f4;
+    border-radius: 0.5em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #3a76d8;
+}

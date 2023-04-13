@@ -1,3 +1,9 @@
+<!-- 
+    One our crud system finalize this page should not be visible and user cannot visit this when 
+he is logged on if he visited it'll be redirected to homepage
+
+    There are cases in different scales of device that the login-box may collide (near) with the navbar
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,9 +21,45 @@
         <title>Login or sign up | Room Rental System</title>
     </head>
     <body>
-        <?php 
-        include("./include/header.php")
-        ?>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+          <img src="/favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 25px !important;">
+          Room Rental System
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" href="#">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Faq</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hna" href="/create/">Create Account</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
         <div class="login-box">
         <img src="/rrs-logo.webp" width="300" alt="Room Rental System">
             <form action="<?php htmlspecialchars('php_self'); ?>" method="post">
@@ -51,6 +93,7 @@
     </div>
         <div class="toast-body">
           <p id="error"></p>
+        </div>
         </div>
         <script src="/assets/bootstrap.min.js"></script>
 <script src="/assets/lozad.min.js"></script>

@@ -1,3 +1,10 @@
+<!-- 
+    This thing should firstly check the user credentials before changing it
+    Ask user about his email, password
+    then using modal to prompt for new password & confirm password
+    before saving to database
+-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,6 +22,48 @@
         <title>Forgot Password | Room Rental System</title>
     </head>
     <body>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+          <img src="/favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 25px !important;">
+          Room Rental System
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" href="#">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Faq</a>
+            </li>
+            <!--
+                Since this page can user visit while logged on this item should be replace by his name.
+            -->
+            <li class="nav-item">
+              <a class="nav-link hna" href="/login/">Log in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
         <div class="login-box">
         <img src="/rrs-logo.webp" width="300" alt="Room Rental System">
             <form action="<?php htmlspecialchars('php_self'); ?>" method="post">
@@ -50,6 +99,7 @@
     </div>
         <div class="toast-body">
           <p id="error"></p>
+        </div>
         </div>
         <script src="/assets/bootstrap.min.js"></script>
 <script src="/assets/lozad.min.js"></script>
