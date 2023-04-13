@@ -56,42 +56,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="/assets/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/login.css">
 
-        <link rel="shortcut icon" href="anya.jpg">
-        <link rel="apple-touch-icon" href="anya.jpg">
-        <title>Create Account</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/favicon.png">
+        <link rel="apple-touch-icon" href="/favicon.png">
+        <title>404 File Not Found | Room Rental System</title>
     </head>
     <body>
         <div class="login-box">
-            <img src="anya.jpg" width="100" alt="Anya">
-            <br>
-            <h2>CREATE ACCOUNT</h2>
-            <form action="<?php htmlspecialchars('php_self'); ?>" method="post">
-                <div class="user-box">
-                    <input type="text" name="email" placeholder="Email">
-                    <?php echo "<div class=\"error\">" . $emailErr . "</div>" ?> 
-                </div>
-                <div class="user-box">
-                    <input type="text" name="name" placeholder="Name">
-                    <?php echo "<div class=\"error\">" . $nameErr . "</div>" ?> 
-                </div>
-                <div class="user-box">
-                    <input type="password" name="password" placeholder="Password">
-                    <?php echo "<div class=\"error\">" . $passwordErr . "</div>" ?> 
-                </div>
-                <div class="user-box">
-                    <input type="password" name="cpassword" placeholder="Confirm Password">
-                    <?php echo "<div class=\"error\">" . $cpasswordErr . "</div>" ?> 
-                </div>
-                <div class="user-actions">
-                    <button class="btn" name="login">Login</button> <button class="btn" name="submit" type="submit">Create Account</button> <br><br>
-                    <button class="btn" name="forgot">Forgot Password</button>
-                </div>
-            </form>
+            <img src="/rrs-logo.webp" width="300" alt="Room Rental System">
+            <h1>The page you are looking for was not here</h1>
         </div>
         <script>
-            document.body.style.background = "url('backgrounds/a" + (Math.floor(Math.random() * (12 - 1) ) + 1) + ".jpg') no-repeat fixed center";
+            document.body.style.background = "url('/backgrounds/a" + (Math.floor(Math.random() * (12 - 1) ) + 1) + ".jpg') no-repeat fixed center";
             document.body.style.backgroundSize = "cover";
         </script>
     </body>
