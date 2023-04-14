@@ -20,7 +20,7 @@ he is logged on if he visited it'll be redirected to homepage
     </head>
     <body>
     <header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top">
       <div class="container-fluid">
       <span class="navbar-toggler-icon sidebar" data-bs-toggle="offcanvas" href="#sidebarCanvas" role="button" aria-controls="sidebar" id="sidebarbb"></span>
       <a class="navbar-brand" href="/">
@@ -70,7 +70,7 @@ he is logged on if he visited it'll be redirected to homepage
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-  <p>Our rental service is ...... bla bla bla of this dudud du and of that using what ha dododo.</p>
+  <p>A software solution that helps businesses manage their rental properties. It allows users to track and manage rental agreements, payments, and other related task.</p>
   <ul class="menu">
         <li class="menuitem" ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 24px; margin-right: 10px;"><title>Rooms</title><path fill="#484848" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg>Rooms</a></li>
         <li class="menuitem" ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 24px; margin-right: 10px;"><title>Pricing</title><path fill="#484848" d="M7,15H9C9,16.08 10.37,17 12,17C13.63,17 15,16.08 15,15C15,13.9 13.96,13.5 11.76,12.97C9.64,12.44 7,11.78 7,9C7,7.21 8.47,5.69 10.5,5.18V3H13.5V5.18C15.53,5.69 17,7.21 17,9H15C15,7.92 13.63,7 12,7C10.37,7 9,7.92 9,9C9,10.1 10.04,10.5 12.24,11.03C14.36,11.56 17,12.22 17,15C17,16.79 15.53,18.31 13.5,18.82V21H10.5V18.82C8.47,18.31 7,16.79 7,15Z" /></svg>Pricing</a></li>
@@ -93,10 +93,58 @@ he is logged on if he visited it'll be redirected to homepage
   </div>
 </div>
 
-        <center style="margin-top: 23%; color: #fff;">
-<h1 style="font-size: 50px">Hindi ko alam kung ano ilalagay ko dito</h1>
-</center>
-
+<div class="card mb-3 first" style="border-radius: 0px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+          <img loading="lazy" src="/backgrounds/a1.jpg" class="rounded mx-auto d-block img-fluid"
+              alt="Logo" width="500">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h1 class="card-title">Why us?</h1>
+              <p class="card-text">
+             Rent a room easier and more convenient. We provides a secure and reliable platform to search for and book rooms, as well as manage their rental payments. Our system also offers a variety of features that make it easier to find the perfect room for your needs, such as detailed descriptions of each room, photos, and reviews from other users. Additionally, our system is designed to be user-friendly and easy to navigate, so you can quickly find the room you need.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3 second" style="border-radius: 10px;">
+        <div class="row g-0">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h1 class="card-title">Affordable Prices & Easy to Book</h1>
+              <p class="card-text">
+            Make it easy and affordable to book a room. We offer competitive prices and a simple booking process that makes it easy to find the perfect room for your needs. Plus, our customer service team is always available to help with any questions or concerns you may have.
+             </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+          <img loading="lazy" src="/backgrounds/a2.jpg" class="rounded mx-auto d-block img-fluid"
+              alt="Logo" width="500">
+          </div>
+        </div>
+      </div>
+      <section>
+      <div class="row">
+        <div class="col-sm-6 ppct1">
+          <img loading="lazy" src="/backgrounds/a3.jpg" class="rounded mx-auto d-block img-fluid ppct"
+              alt="Logo" width="500">
+        </div>
+        <div class="col-sm-6 ppct1">
+          <img loading="lazy" src="/backgrounds/a4.jpg" class="rounded mx-auto d-block img-fluid ppct"
+              alt="Logo" width="500">
+        </div>
+        <div class="col-sm-6 ppct1">
+          <img loading="lazy" src="/backgrounds/a5.jpg" class="rounded mx-auto d-block img-fluid ppct"
+              alt="Logo" width="500">
+        </div>
+        <div class="col-sm-6 ppct1">
+          <img loading="lazy" src="/backgrounds/a6.jpg" class="rounded mx-auto d-block img-fluid ppct"
+              alt="Logo" width="500">
+        </div>
+      </div>
+</section>
   <footer class="footer">
     <a href="#" style="padding-left: 2px; padding-right: 2px;" target="_blank">
       <svg style="width:24px;height:24px" viewBox="0 0 24 24">
