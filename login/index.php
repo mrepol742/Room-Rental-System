@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (empty($_POST["password"])) {
             echo '<script>showErr("Password is required!")</script>';
         } else if (isset($_POST['submit'])) {
-		    header('Location: /');
+		        header('Location: ./');
         }
     }
 }

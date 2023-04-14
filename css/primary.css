@@ -58,6 +58,18 @@ nav {
     color: #4285f4;
 }
 
+.offcanvas {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    z-index: 99999;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-bottom: 3%;
+    border: none;
+    transition: all 0.4s ease;
+    width: 20% !important;
+}
+
 @media (max-width:1080px) {
 
     nav {
@@ -91,6 +103,10 @@ nav {
         padding-top: 15% !important;
         padding-bottom: 8% !important;
     }
+
+    .offcanvas {
+        width: 40% !important;
+    }
 }
 
 
@@ -123,16 +139,6 @@ footer {
     border: none;
 }
 
-.offcanvas {
-    z-index: 99999;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    margin-bottom: 3%;
-    border: none;
-    transition: all 0.4s ease;
-}
-
 .menu {
     list-style-type: none;
     text-align: left;
@@ -147,7 +153,9 @@ footer {
 }
 
 .menuitem:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: #4286f483;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
  }
 
 .menuitem a{
@@ -170,4 +178,12 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: #3a76d8;
+}
+
+.dropdown-toggle {
+    padding: 0px;
+}
+
+.offcanvas-header {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
