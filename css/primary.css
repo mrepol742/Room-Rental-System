@@ -65,7 +65,6 @@ nav {
     border-bottom-right-radius: 15px;
     border: none;
     transition: all 0.4s ease;
-    width: 20% !important;
 }
 
 @media (max-width:1080px) {
@@ -99,10 +98,6 @@ nav {
     footer {
         padding-top: 15% !important;
         padding-bottom: 8% !important;
-    }
-
-    .offcanvas {
-        width: 40% !important;
     }
 }
 
@@ -140,7 +135,10 @@ footer {
 }
 
 .menuitem {
-   padding: 7px !important;
+   padding-top: 12px !important;
+   padding-bottom: 12px !important;
+   padding-left: 24px !important;
+   padding-right: 24px !important;
    margin-left: -9% !important;
    border-radius: 7px;
    border: none;
@@ -148,9 +146,9 @@ footer {
 }
 
 .menuitem:hover {
-    background: #4286f483;
-    padding-right: 10px !important;
-    padding-left: 10px !important;
+    background: rgba(0, 0, 0, 0.1);
+    padding-left: 26px !important;
+   padding-right: 26px !important;
  }
 
 .menuitem a{
@@ -190,9 +188,9 @@ footer {
 }
 
 .second {
-    padding: 30px;
-    margin-left: 5%;
-    margin-right: 5%;
+    padding: 40px;
+    margin-left: 3%;
+    margin-right: 3%;
     background-color: #fff;
     color: #000;
 }
@@ -216,4 +214,19 @@ section {
 
 .ppct:hover {
     box-shadow: 0 0 5em rgba(0, 0, 0, .3);
+}
+
+.offcanvas-title {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.offcanvas-title:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: none;
+}
+
+.offcanvas-body {
+    padding: 0;
 }

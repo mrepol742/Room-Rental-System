@@ -76,9 +76,17 @@ he is logged on if he visited it'll be redirected to homepage
             </form>
         </div>
         <script>
+                updateBg()
+            setInterval(function() {
+	updateBg();
+}, 10000);
+
+function updateBg() {
             document.body.style.background = "url('/backgrounds/a" + (Math.floor(Math.random() * (12 - 1) ) + 1) + ".jpg') no-repeat fixed center";
             document.body.style.backgroundSize = "cover";
-            document.body.style.transition = "all 1s ease";
+            document.body.style.transition = "all 1.5s ease";
+}
+
 
             function showErr(err) {
                 let bsAlert = new  bootstrap.Toast(document.getElementById("error-toast"));
