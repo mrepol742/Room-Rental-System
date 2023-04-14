@@ -142,6 +142,7 @@ he is logged on if he visited it'll be redirected to homepage
         <div class="col-sm-6 ppct1">
           <img loading="lazy" src="/backgrounds/a6.jpg" class="rounded mx-auto d-block img-fluid ppct"
               alt="Logo" width="500">
+          </div>
         </div>
       </div>
 </section>
