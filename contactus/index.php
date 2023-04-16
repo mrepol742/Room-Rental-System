@@ -12,7 +12,7 @@
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="/favicon.png">
         <link rel="apple-touch-icon" href="/favicon.png">
-        <title>About | Room Rental System</title>
+        <title>Contact Us | Room Rental System</title>
     </head>
     <body>
     <header>
