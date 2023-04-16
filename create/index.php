@@ -34,22 +34,22 @@ he is logged on if he visited it'll be redirected to homepage
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-              <a class="nav-link" href="#">Rooms</a>
+              <a class="nav-link" href="/rooms">Rooms</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="/pricing">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Categories</a>
+              <a class="nav-link" href="/categories">Categories</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="/about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
+              <a class="nav-link" href="/contactus">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Faq</a>
+              <a class="nav-link" href="/faq">Faq</a>
             </li>
             <li class="nav-item">
               <a class="nav-link hna" href="/login/">Log in</a>

@@ -35,6 +35,18 @@ a {
     transition: all 1s ease;
 }
 
+.active {
+   color: #4285f4 !important;
+   font-weight: 600;
+   transition: all 1s ease;
+}
+
+.active:hover {
+    color: #fff !important;
+   font-weight: 600;
+   transition: all 1s ease;
+}
+
 .hna:hover {
     background: rgba(0, 0, 0, 0.9);
 }

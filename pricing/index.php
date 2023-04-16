@@ -1,7 +1,3 @@
-<!-- 
-    When our crud system finalize this page should not be visible and user cannot visit this when 
-he is logged on if he visited it'll be redirected to homepage
--->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,7 +12,7 @@ he is logged on if he visited it'll be redirected to homepage
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="/favicon.png">
         <link rel="apple-touch-icon" href="/favicon.png">
-        <title>Home | Room Rental System</title>
+        <title>About | Room Rental System</title>
     </head>
     <body>
     <header>
@@ -37,10 +33,10 @@ he is logged on if he visited it'll be redirected to homepage
               <a class="nav-link" href="/rooms">Rooms</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pricing">Pricing</a>
+              <a class="nav-link active" href="#">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/categries">Categories</a>
+              <a class="nav-link" href="/categories">Categories</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/about">About</a>
@@ -88,60 +84,6 @@ he is logged on if he visited it'll be redirected to homepage
   </div>
 </div>
 
-<div class="card mb-3 first" style="border-radius: 0px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-          <img loading="lazy" src="/backgrounds/a1.jpg" class="rounded mx-auto d-block img-fluid"
-              alt="Logo" width="500">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h1 class="card-title">Why us?</h1>
-              <p class="card-text">
-             Rent a room easier and more convenient. We provides a secure and reliable platform to search for and book rooms, as well as manage their rental payments. Our system also offers a variety of features that make it easier to find the perfect room for your needs, such as detailed descriptions of each room, photos, and reviews from other users. Additionally, our system is designed to be user-friendly and easy to navigate, so you can quickly find the room you need.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card mb-3 second" style="border-radius: 10px;">
-        <div class="row g-0">
-          <div class="col-md-8">
-            <div class="card-body">
-              <h1 class="card-title">Affordable Prices & Easy to Book</h1>
-              <p class="card-text">
-            Make it easy and affordable to book a room. We offer competitive prices and a simple booking process that makes it easy to find the perfect room for your needs. Plus, our customer service team is always available to help with any questions or concerns you may have.
-             </p>
-            </div>
-          </div>
-          <div class="col-md-4">
-          <img loading="lazy" src="/backgrounds/a2.jpg" class="rounded mx-auto d-block img-fluid"
-              alt="Logo" width="500">
-          </div>
-        </div>
-      </div>
-      <section>
-      <div class="row">
-        <h2>Available</h2>
-        <div class="col-sm-6 ppct1">
-          <img loading="lazy" src="/backgrounds/a3.jpg" class="rounded mx-auto d-block img-fluid ppct"
-              alt="Logo" width="500">
-        </div>
-        <div class="col-sm-6 ppct1">
-          <img loading="lazy" src="/backgrounds/a4.jpg" class="rounded mx-auto d-block img-fluid ppct"
-              alt="Logo" width="500">
-        </div>
-        <div class="col-sm-6 ppct1">
-          <img loading="lazy" src="/backgrounds/a5.jpg" class="rounded mx-auto d-block img-fluid ppct"
-              alt="Logo" width="500">
-        </div>
-        <div class="col-sm-6 ppct1">
-          <img loading="lazy" src="/backgrounds/a6.jpg" class="rounded mx-auto d-block img-fluid ppct"
-              alt="Logo" width="500">
-          </div>
-        </div>
-      </div>
-</section>
   <footer class="footer">
     <a href="#" style="padding-left: 2px; padding-right: 2px;" target="_blank">
       <svg style="width:24px;height:24px" viewBox="0 0 24 24">
