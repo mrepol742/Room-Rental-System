@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="/assets/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/primary.css">
+        <link rel="stylesheet" href="assets/bootstrap.min.css">
+        <link rel="stylesheet" href="css/primary.css">
 
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="/favicon.png">
-        <link rel="apple-touch-icon" href="/favicon.png">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="apple-touch-icon" href="favicon.png">
         <title>About | Room Rental System</title>
     </head>
     <body>
@@ -19,8 +19,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top">
       <div class="container-fluid">
       <span class="navbar-toggler-icon sidebar" data-bs-toggle="offcanvas" href="#sidebarCanvas" role="button" aria-controls="sidebar" id="sidebarbb"></span>
-      <a class="navbar-brand" href="/">
-          <img src="/favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 25px !important;">
+      <a class="navbar-brand" href="">
+          <img src="favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 25px !important;">
           Room Rental System
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -30,29 +30,29 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-              <a class="nav-link" href="/rooms">Rooms</a>
+              <a class="nav-link" href="rooms">Rooms</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pricing">Pricing</a>
+              <a class="nav-link" href="pricing">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/categories">Categories</a>
+              <a class="nav-link" href="categories">Categories</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contactus">Contact Us</a>
+              <a class="nav-link" href="contactus">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/faq">Faq</a>
+              <a class="nav-link" href="faq">Faq</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link anh" href="/create/">Create Account</a>
+              <a class="nav-link anh" href="create/">Create Account</a>
             </li>
             <hr>
             <li class="nav-item">
-              <a class="nav-link hna" href="/login/">Login</a>
+              <a class="nav-link hna" href="login/">Login</a>
             </li>
           </ul>
         </div>
@@ -161,8 +161,8 @@
             
           
         </script>
-        <script src="/assets/bootstrap.min.js"></script>
-<script src="/assets/lozad.min.js"></script>
+        <script src="assets/bootstrap.min.js"></script>
+<script src="assets/lozad.min.js"></script>
 <script>
     
     /*

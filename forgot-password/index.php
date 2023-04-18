@@ -13,20 +13,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="/assets/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="assets/bootstrap.min.css">
+        <link rel="stylesheet" href="css/login.css">
         
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="/favicon.png">
-        <link rel="apple-touch-icon" href="/favicon.png">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="apple-touch-icon" href="favicon.png">
         <title>Forgot Password | Room Rental System</title>
     </head>
     <body>
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-          <img src="/favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 25px !important;">
+      <a class="navbar-brand" href="">
+          <img src="favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 25px !important;">
           Room Rental System
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -57,7 +57,7 @@
                 Since this page can user visit while logged on this item should be replace by his name.
             -->
             <li class="nav-item">
-              <a class="nav-link hna" href="/login/">Log in</a>
+              <a class="nav-link hna" href="login/">Log in</a>
             </li>
           </ul>
         </div>
@@ -65,7 +65,7 @@
     </nav>
   </header>
         <div class="login-box">
-        <img src="/rrs-logo.webp" width="300" alt="Room Rental System">
+        <img src="rrs-logo.webp" width="300" alt="Room Rental System">
             <form action="<?php htmlspecialchars('php_self'); ?>" method="post">
                 <div class="user-box">
                     <input type="text" name="email" placeholder="Email">
@@ -90,9 +90,9 @@
           <p id="error"></p>
         </div>
         </div>
-        <script src="/assets/bootstrap.min.js"></script>
-<script src="/assets/lozad.min.js"></script>
-<script src="/js/login.js"></script>
+        <script src="assets/bootstrap.min.js"></script>
+<script src="assets/lozad.min.js"></script>
+<script src="js/login.js"></script>
     </body>
 </html>
 

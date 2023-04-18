@@ -51,8 +51,8 @@
     <br>
     <span>© 2023 Room Rental System</span>
   </footer>
-<script src="/assets/bootstrap.min.js"></script>
-<script src="/assets/lozad.min.js"></script>
+<script src="assets/bootstrap.min.js"></script>
+<script src="assets/lozad.min.js"></script>
 <script>
         const observer = lozad();
 observer.observe();

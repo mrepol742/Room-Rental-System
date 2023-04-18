@@ -10,12 +10,12 @@ he is logged on if he visited it'll be redirected to homepage
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta name="theme-color" content="#ffffff">
-        <link rel="stylesheet" href="/assets/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/primary.css">
+        <link rel="stylesheet" href="assets/bootstrap.min.css">
+        <link rel="stylesheet" href="css/primary.css">
 
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="/favicon.png">
-        <link rel="apple-touch-icon" href="/favicon.png">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="apple-touch-icon" href="favicon.png">
         <title>Home | Room Rental System</title>
     </head>
     <body>
@@ -23,8 +23,8 @@ he is logged on if he visited it'll be redirected to homepage
     <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top">
       <div class="container-fluid">
       <span class="navbar-toggler-icon sidebar" data-bs-toggle="offcanvas" href="#sidebarCanvas" role="button" aria-controls="sidebar" id="sidebarbb"></span>
-      <a class="navbar-brand" href="/">
-          <img src="/favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 25px !important;">
+      <a class="navbar-brand" href="">
+          <img src="favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 25px !important;">
           Room Rental System
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -34,29 +34,29 @@ he is logged on if he visited it'll be redirected to homepage
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-              <a class="nav-link" href="/rooms">Rooms</a>
+              <a class="nav-link" href="rooms">Rooms</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pricing">Pricing</a>
+              <a class="nav-link" href="pricing">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/categries">Categories</a>
+              <a class="nav-link" href="categries">Categories</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
+              <a class="nav-link" href="about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contactus">Contact Us</a>
+              <a class="nav-link" href="contactus">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/faq">Faq</a>
+              <a class="nav-link" href="faq">Faq</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link anh" href="/create/">Create Account</a>
+              <a class="nav-link anh" href="create/">Create Account</a>
             </li>
             <hr>
             <li class="nav-item">
-              <a class="nav-link hna" href="/login/">Login</a>
+              <a class="nav-link hna" href="login/">Login</a>
             </li>
           </ul>
         </div>
@@ -71,7 +71,7 @@ he is logged on if he visited it'll be redirected to homepage
 
 
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="/logout"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>logout</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Logout</a></li>
+        <li><a class="dropdown-item" href="logout"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>logout</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Logout</a></li>
       </ul>
     </div>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -92,7 +92,7 @@ he is logged on if he visited it'll be redirected to homepage
 <div class="card mb-3 first" style="border-radius: 0px;">
         <div class="row g-0">
           <div class="col-md-4">
-          <img loading="lazy" src="/backgrounds/a1.jpg" class="rounded mx-auto d-block img-fluid"
+          <img loading="lazy" src="backgrounds/a1.jpg" class="rounded mx-auto d-block img-fluid"
               alt="Logo" width="500">
           </div>
           <div class="col-md-8">
@@ -116,7 +116,7 @@ he is logged on if he visited it'll be redirected to homepage
             </div>
           </div>
           <div class="col-md-4">
-          <img loading="lazy" src="/backgrounds/a2.jpg" class="rounded mx-auto d-block img-fluid"
+          <img loading="lazy" src="backgrounds/a2.jpg" class="rounded mx-auto d-block img-fluid"
               alt="Logo" width="500">
           </div>
         </div>
@@ -125,19 +125,19 @@ he is logged on if he visited it'll be redirected to homepage
       <div class="row">
         <h2>Available</h2>
         <div class="col-sm-6 ppct1">
-          <img loading="lazy" src="/backgrounds/a3.jpg" class="rounded mx-auto d-block img-fluid ppct"
+          <img loading="lazy" src="backgrounds/a3.jpg" class="rounded mx-auto d-block img-fluid ppct"
               alt="Logo" width="500">
         </div>
         <div class="col-sm-6 ppct1">
-          <img loading="lazy" src="/backgrounds/a4.jpg" class="rounded mx-auto d-block img-fluid ppct"
+          <img loading="lazy" src="backgrounds/a4.jpg" class="rounded mx-auto d-block img-fluid ppct"
               alt="Logo" width="500">
         </div>
         <div class="col-sm-6 ppct1">
-          <img loading="lazy" src="/backgrounds/a5.jpg" class="rounded mx-auto d-block img-fluid ppct"
+          <img loading="lazy" src="backgrounds/a5.jpg" class="rounded mx-auto d-block img-fluid ppct"
               alt="Logo" width="500">
         </div>
         <div class="col-sm-6 ppct1">
-          <img loading="lazy" src="/backgrounds/a6.jpg" class="rounded mx-auto d-block img-fluid ppct"
+          <img loading="lazy" src="backgrounds/a6.jpg" class="rounded mx-auto d-block img-fluid ppct"
               alt="Logo" width="500">
           </div>
         </div>
@@ -220,8 +220,8 @@ he is logged on if he visited it'll be redirected to homepage
             
           
         </script>
-        <script src="/assets/bootstrap.min.js"></script>
-<script src="/assets/lozad.min.js"></script>
+        <script src="assets/bootstrap.min.js"></script>
+<script src="assets/lozad.min.js"></script>
 <script>
     
     /*
