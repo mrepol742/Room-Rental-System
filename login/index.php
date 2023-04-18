@@ -29,8 +29,8 @@ he is logged on if he visited it'll be redirected to homepage
           Room Rental System
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="qwe111">
+          <span class="navbar-toggler-icon" id="qwe"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -75,28 +75,9 @@ he is logged on if he visited it'll be redirected to homepage
                 </div>
             </form>
         </div>
-        <script>
-                updateBg()
-            setInterval(function() {
-	updateBg();
-}, 10000);
-
-function updateBg() {
-            document.body.style.background = "url('/backgrounds/a" + (Math.floor(Math.random() * (12 - 1) ) + 1) + ".jpg') no-repeat fixed center";
-            document.body.style.backgroundSize = "cover";
-            document.body.style.transition = "all 1.5s ease";
-}
-
-
-            function showErr(err) {
-                let bsAlert = new  bootstrap.Toast(document.getElementById("error-toast"));
-                bsAlert.show();
-                document.getElementById("error").innerText = err;
-            }
-        </script>
         <div class="toast" id="error-toast" style="position: fixed; bottom: 0; right: 0; z-index: 9999; float: right; margin: 3%;" data-bs-autohide="true">
         <div class="toast-header">
-      <strong class="me-auto">Error</strong>
+      <strong class="me-auto">Oops!</strong>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
         <div class="toast-body">
@@ -105,17 +86,7 @@ function updateBg() {
         </div>
         <script src="/assets/bootstrap.min.js"></script>
 <script src="/assets/lozad.min.js"></script>
-<script>
-        const observer = lozad();
-observer.observe();
-        if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').then((reg) => {
-      console.log('[ServiceWorker] Registered');
-    }).catch((err) => {
-      console.error('[ServiceWorker] failed: ', err)
-    });
-}
-    </script>
+<script src="/js/login.js"></script>
     </body>
 </html>
 

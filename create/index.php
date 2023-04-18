@@ -28,8 +28,8 @@ he is logged on if he visited it'll be redirected to homepage
           Room Rental System
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon black"></span>
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="qwe111">
+          <span class="navbar-toggler-icon black" id="qwe"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -63,43 +63,28 @@ he is logged on if he visited it'll be redirected to homepage
             <img src="/rrs-logo.webp" width="300" alt="Room Rental System">
             <form action="<?php htmlspecialchars('php_self'); ?>" method="post">
                 <div class="user-box">
-                    <input type="text" name="email" placeholder="Email">
+                    <input type="text" name="email" placeholder="Email (you@gmail.com)">
                 </div>
                 <div class="user-box">
-                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="name" placeholder="Name (Surname, First name, MI.)">
+                </div>
+                <div class="user-box">
+                    <input type="date" name="birthday">
                 </div>
                 <div class="user-box">
                     <input type="password" name="password" placeholder="Password">
                 </div>
                 <div class="user-box">
-                    <input type="password" name="cpassword" placeholder="Confirm Password">
+                    <input type="password" name="cpassword" placeholder="Re-type Password">
                 </div>
                 <div class="user-actions">
                     <button class="btn" name="submit" type="submit">Create Account</button>
                 </div>
             </form>
         </div>
-        <script>
-            updateBg()
-            setInterval(function() {
-	updateBg();
-}, 10000);
-
-function updateBg() {
-            document.body.style.background = "url('/backgrounds/a" + (Math.floor(Math.random() * (12 - 1) ) + 1) + ".jpg') no-repeat fixed center";
-            document.body.style.backgroundSize = "cover";
-            document.body.style.transition = "all 1.5s ease";
-}
-
-            function showErr(err) {
-                let bsAlert = new  bootstrap.Toast(document.getElementById("error-toast"));
-                bsAlert.show();
-                document.getElementById("error").innerText = err;
-            }
-        </script>
         <div class="toast" id="error-toast" style="position: fixed; bottom: 0; right: 0; z-index: 9999; float: right; margin: 3%;" data-bs-autohide="true">
         <div class="toast-header">
-      <strong class="me-auto">Error</strong>
+      <strong class="me-auto">Oops!</strong>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
         <div class="toast-body">
@@ -108,17 +93,7 @@ function updateBg() {
         </div>
         <script src="/assets/bootstrap.min.js"></script>
 <script src="/assets/lozad.min.js"></script>
-<script>
-        const observer = lozad();
-observer.observe();
-        if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').then((reg) => {
-      console.log('[ServiceWorker] Registered');
-    }).catch((err) => {
-      console.error('[ServiceWorker] failed: ', err)
-    });
-}
-    </script>
+<script src="/js/login.js"></script>
     </body>
 </html>
 
@@ -131,6 +106,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         if (empty($_POST["name"])) {
             echo '<script>showErr("Name is required!")</script>';
+        } else {
+          if (empty($_POST["birthday"])) {
+            echo '<script>showErr("Birthday is required!")</script>';
         } else {
             if (empty($_POST["password"])) {
                 echo '<script>showErr("Password is required!")</script>';
@@ -145,6 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
             }
+          }
         }
     }
 }

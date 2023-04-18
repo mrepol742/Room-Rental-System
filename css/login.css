@@ -171,3 +171,13 @@ nav {
     margin-top: 20px !important;
   }
 }
+
+#qwe {
+  background-image: url("/chevron-down.svg");
+  background-size: 100%;
+  background-position: center center;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  transition: all 1s ease;
+}

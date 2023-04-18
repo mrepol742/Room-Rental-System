@@ -1,7 +1,3 @@
-<!-- 
-    When our crud system finalize this page should not be visible and user cannot visit this when 
-he is logged on if he visited it'll be redirected to homepage
--->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,7 +12,7 @@ he is logged on if he visited it'll be redirected to homepage
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="/favicon.png">
         <link rel="apple-touch-icon" href="/favicon.png">
-        <title>Home | Room Rental System</title>
+        <title>Categories | Room Rental System</title>
     </head>
     <body>
     <header>
@@ -40,7 +36,7 @@ he is logged on if he visited it'll be redirected to homepage
               <a class="nav-link" href="/pricing">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/categries">Categories</a>
+              <a class="nav-link active" href="#">Categories</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/about">About</a>
@@ -71,7 +67,7 @@ he is logged on if he visited it'll be redirected to homepage
 
 
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="/logout"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>logout</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Logout</a></li>
+        <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>logout</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Logout</a></li>
       </ul>
     </div>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -83,66 +79,11 @@ he is logged on if he visited it'll be redirected to homepage
         <li class="menuitem"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Locations</title><path fill="#484848"  d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" /></svg>Locations</a></li>
         <li class="menuitem" ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Tenants</title><path fill="#484848" d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" /></svg>Tenants</a></li>
         <li class="menuitem" ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Amnenity</title><path fill="#484848" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>Amnenity</a></li>
-        <li class="menuitem"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Chat with Us</title><path  fill="#484848" d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>Chat with Us</a></li>
       </ul>
 
   </div>
 </div>
 
-<div class="card mb-3 first" style="border-radius: 0px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-          <img loading="lazy" src="/backgrounds/a1.jpg" class="rounded mx-auto d-block img-fluid"
-              alt="Logo" width="500">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h1 class="card-title">Why us?</h1>
-              <p class="card-text">
-             Rent a room easier and more convenient. We provides a secure and reliable platform to search for and book rooms, as well as manage their rental payments. Our system also offers a variety of features that make it easier to find the perfect room for your needs, such as detailed descriptions of each room, photos, and reviews from other users. Additionally, our system is designed to be user-friendly and easy to navigate, so you can quickly find the room you need.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card mb-3 second" style="border-radius: 10px;">
-        <div class="row g-0">
-          <div class="col-md-8">
-            <div class="card-body">
-              <h1 class="card-title">Affordable Prices & Easy to Book</h1>
-              <p class="card-text">
-            Make it easy and affordable to book a room. We offer competitive prices and a simple booking process that makes it easy to find the perfect room for your needs. Plus, our customer service team is always available to help with any questions or concerns you may have.
-             </p>
-            </div>
-          </div>
-          <div class="col-md-4">
-          <img loading="lazy" src="/backgrounds/a2.jpg" class="rounded mx-auto d-block img-fluid"
-              alt="Logo" width="500">
-          </div>
-        </div>
-      </div>
-      <section>
-      <div class="row">
-        <h2>Available</h2>
-        <div class="col-sm-6 ppct1">
-          <img loading="lazy" src="/backgrounds/a3.jpg" class="rounded mx-auto d-block img-fluid ppct"
-              alt="Logo" width="500">
-        </div>
-        <div class="col-sm-6 ppct1">
-          <img loading="lazy" src="/backgrounds/a4.jpg" class="rounded mx-auto d-block img-fluid ppct"
-              alt="Logo" width="500">
-        </div>
-        <div class="col-sm-6 ppct1">
-          <img loading="lazy" src="/backgrounds/a5.jpg" class="rounded mx-auto d-block img-fluid ppct"
-              alt="Logo" width="500">
-        </div>
-        <div class="col-sm-6 ppct1">
-          <img loading="lazy" src="/backgrounds/a6.jpg" class="rounded mx-auto d-block img-fluid ppct"
-              alt="Logo" width="500">
-          </div>
-        </div>
-      </div>
-</section>
   <footer class="footer">
     <a href="#" style="padding-left: 2px; padding-right: 2px;" target="_blank">
       <svg style="width:24px;height:24px" viewBox="0 0 24 24">
