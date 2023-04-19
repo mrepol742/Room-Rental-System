@@ -71,7 +71,7 @@ nav {
 }
 
 .offcanvas {
-    background: rgba(255, 255, 255, 0.9);
+    background: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
     z-index: 99999;
     border-top-right-radius: 15px;
@@ -148,10 +148,10 @@ footer {
 }
 
 .menuitem {
-   padding-top: 12px !important;
-   padding-bottom: 12px !important;
-   padding-left: 24px !important;
-   padding-right: 24px !important;
+   padding-top: 15px !important;
+   padding-bottom: 15px !important;
+   padding-left: 40px !important;
+   padding-right: 40px !important;
    margin-left: -9% !important;
    border-radius: 7px;
    border: none;
@@ -191,7 +191,13 @@ footer {
 }
 
 .offcanvas-header {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    height: 180px;
+    background: url("../backgrounds/a1.jpg") no-repeat fixed right;
+    background-size:150%;
+    border-top-right-radius: 15px;
+    border: none;
+    align-items: flex-start;
 }
 
 .first {
@@ -242,4 +248,5 @@ section {
 
 .offcanvas-body {
     padding: 0;
+    margin-top: 10px;
 }

@@ -22,9 +22,9 @@ if (!isLogin()) {
 } else {
   $session_status = $_SESSION['name'];
   $session_action = '<li><a class="dropdown-item" href="logout"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>logout</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Logout</a></li>';
+  $session_action .= '<li><a class="dropdown-item" href="change-password"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>change password</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Change Password</a></li>';
 }
 
-$session_action .= '<li><a class="dropdown-item" href="change-password"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>change password</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Change Password</a></li>';
 $session_action .= '<li><a class="dropdown-item" href="forgot-password"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>forgot password</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Forgot Password</a></li>';
 ?>
 <!DOCTYPE html>
@@ -41,6 +41,7 @@ $session_action .= '<li><a class="dropdown-item" href="forgot-password"><svg xml
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="favicon.png">
         <link rel="apple-touch-icon" href="favicon.png">
+        <link rel="manifest" href="site.webmanifest">
         <title>Home | Room Rental System</title>
     </head>
     <body>
@@ -65,7 +66,7 @@ $session_action .= '<li><a class="dropdown-item" href="forgot-password"><svg xml
               <a class="nav-link" href="pricing">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="categries">Categories</a>
+              <a class="nav-link" href="categories">Categories</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about">About</a>
@@ -229,10 +230,10 @@ $session_action .= '<li><a class="dropdown-item" href="forgot-password"><svg xml
             qwe111.addEventListener("click", function() {
                 if (isShow) {
                     isShow = false;
-                    qwe.style.background = 'url("/chevron-up.svg")';
+                    qwe.style.background = 'url("chevron-up.svg")';
                 } else {
                     isShow = true;
-                    qwe.style.background = 'url("/chevron-down.svg")';
+                    qwe.style.background = 'url("chevron-down.svg")';
                 }
             });
             
