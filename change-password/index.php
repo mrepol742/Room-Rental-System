@@ -19,7 +19,7 @@
         <link rel="icon" href="../favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="../favicon.png">
         <link rel="apple-touch-icon" href="../favicon.png">
-        <title>Forgot Password | Room Rental System</title>
+        <title>Change Password | Room Rental System</title>
     </head>
     <body>
     <header>
@@ -65,16 +65,16 @@
                     <input type="text" name="email" placeholder="Email">
                 </div>
                 <div class="user-box">
-                    <input type="text" name="code"  placeholder="Enter Code">
+                    <input type="text" name="password"  placeholder="Previous Password">
                 </div>
                 <div class="user-box">
-                    <input type="text" name="password"  placeholder="New Password">
+                    <input type="text" name="npassword"  placeholder="New Password">
                 </div>
                 <div class="user-box">
-                    <input type="password" name="npassword"  placeholder="Confirm Password">
+                    <input type="password" name="cpassword"  placeholder="Confirm Password">
                 </div>
                 <div class="user-actions">
-                    <button class="btn" name="submit" type="submit">Forgot Password</button>
+                    <button class="btn" name="submit" type="submit">Change Password</button>
                 </div>
             </form>
         </div>
@@ -96,26 +96,34 @@
 <?php
 include("../include/connections.php");
 
-$email = $password = "";
+$email = $password = $npassword = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
  
     if (empty($_POST["email"])) {
         echo '<script>showErr("Email is required!")</script>';
     } else {
-         $email = $_POST["email"];
         if (empty($_POST["password"])) {
-          echo '<script>showErr("You need to enter your new password!")</script>';
+            echo '<script>showErr("You need to type your previous password!")</script>';
         } else {
-          $password = $_POST["password"];
             if (empty($_POST["npassword"])) {
                 echo '<script>showErr("You need to enter your new password!")</script>';
             } else {
-                if ($_POST["password"] != $_POST["npassword"]) {
+              if (empty($_POST["cpassword"])) {
+                echo '<script>showErr("You need to retype your password again!")</script>';
+            } else {
+                if ($_POST["npassword"] != $_POST["cpassword"]) {
                     echo '<script>showErr("Password did not match!")</script>';
                 } else if (isset($_POST['submit'])) {
+                  if ($password == $npassword) {
+                    echo '<script>showErr("You cannot use your previous password as new one!")</script>';
+                  } else {
+                    // save to database
+                    
                     echo '<script>window.location.href = "../login"</script>';
                     die();
+                  }
                 }
+              }
             }
         }
     }
