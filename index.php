@@ -2,6 +2,27 @@
     When our crud system finalize this page should not be visible and user cannot visit this when 
 he is logged on if he visited it'll be redirected to homepage
 -->
+
+<?php
+include("include/session.php");
+
+$account = $session_status = $session_action = "";
+
+if (!isLogin()) {
+  $account = '<li class="nav-item">
+  <a class="nav-link anh" href="create/">Create Account</a>
+  </li>
+  <hr>
+  <li class="nav-item">
+  <a class="nav-link hna" href="login/">Login</a>
+  </li>';
+  $session_status = "Not login";
+  $session_action = '<li><a class="dropdown-item" href="login"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>Login</title><path fill="#484848" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg>Login</a></li>';
+  $session_action .= '<li><a class="dropdown-item" href="create"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>account-plus</title><path fill="#484848" d="M15,14C12.33,14 7,15.33 7,18V20H23V18C23,15.33 17.67,14 15,14M6,10V7H4V10H1V12H4V15H6V12H9V10M15,12A4,4 0 0,0 19,8A4,4 0 0,0 15,4A4,4 0 0,0 11,8A4,4 0 0,0 15,12Z" /></svg>Create Account</a></li>';
+} else {
+  $session_action = '<li><a class="dropdown-item" href="logout"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>logout</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Logout</a></li>';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -51,13 +72,7 @@ he is logged on if he visited it'll be redirected to homepage
             <li class="nav-item">
               <a class="nav-link" href="faq">Faq</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link anh" href="create/">Create Account</a>
-            </li>
-            <hr>
-            <li class="nav-item">
-              <a class="nav-link hna" href="login/">Login</a>
-            </li>
+            <?php echo $account; ?> 
           </ul>
         </div>
       </div>
@@ -66,12 +81,11 @@ he is logged on if he visited it'll be redirected to homepage
 
   <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarCanvas" aria-labelledby="sidebar">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="sidebarCanvas" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 24px; margin-right: 7px;"><title>Account</title><path fill="#484848" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" /></svg> Melvin Jones <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px"><path fill="#484848" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg></h5>
+    <h5 class="offcanvas-title" id="sidebarCanvas" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"> 
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 24px; margin-right: 7px;"><title>Account</title><path fill="#484848" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" /></svg> <?php echo $session_status; ?> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px"><path fill="#484848" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg></h5>
     <div class="dropdown">
-
-
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="logout"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>logout</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Logout</a></li>
+        <?php echo $session_action; ?>
       </ul>
     </div>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -198,7 +212,7 @@ he is logged on if he visited it'll be redirected to homepage
   </footer>
 
         <script>
-            document.body.style.background = "url('/backgrounds/a" + (Math.floor(Math.random() * (12 - 1) ) + 1) + ".jpg') no-repeat fixed center";
+            document.body.style.background = "url('backgrounds/a" + (Math.floor(Math.random() * (12 - 1) ) + 1) + ".jpg') no-repeat fixed center";
             document.body.style.backgroundSize = "cover";
             document.body.style.transition = "all 1s ease";
 
@@ -235,7 +249,7 @@ he is logged on if he visited it'll be redirected to homepage
 * caching the contents instead of loading it on the disk or on the server
 */
         if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').then((reg) => {
+    navigator.serviceWorker.register('sw.js').then((reg) => {
       console.log('[ServiceWorker] Registered');
     }).catch((err) => {
       console.error('[ServiceWorker] failed: ', err)
@@ -246,7 +260,7 @@ he is logged on if he visited it'll be redirected to homepage
 </html>
 
 <?php
-include("../include/connections.php");
+include("include/connections.php");
 
 
 ?>

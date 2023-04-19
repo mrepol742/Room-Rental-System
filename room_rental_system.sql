@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 18, 2023 at 09:23 AM
+-- Generation Time: Apr 19, 2023 at 06:14 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `accounts` (
   `_id` int(11) NOT NULL,
-  `name` varchar(300) NOT NULL,
+  `user_name` varchar(300) NOT NULL,
   `email` varchar(300) NOT NULL,
   `birthdate` date NOT NULL,
-  `password` varchar(300) NOT NULL,
+  `user_password` varchar(300) NOT NULL,
   `valid_id_num` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -89,11 +89,11 @@ CREATE TABLE `room` (
 
 CREATE TABLE `tenants` (
   `_id` int(11) NOT NULL,
-  `name` int(11) NOT NULL,
-  `email` int(11) NOT NULL,
-  `birthdate` int(11) NOT NULL,
-  `location` int(11) NOT NULL,
-  `password` int(11) NOT NULL,
+  `tenant_name` varchar(300) NOT NULL,
+  `email` varchar(300) NOT NULL,
+  `birthdate` date NOT NULL,
+  `location` varchar(300) NOT NULL,
+  `tenant_password` varchar(300) NOT NULL,
   `valid_id_num` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
