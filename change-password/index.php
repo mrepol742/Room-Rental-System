@@ -1,9 +1,11 @@
-<!-- 
-    This thing should firstly check the user credentials before changing it
-    Ask user about his email, password
-    then using modal to prompt for new password & confirm password
-    before saving to database
--->
+<?php
+include("../include/session.php");
+
+if (isLogin()) {
+  echo '<script>window.location.href = "../"</script>';
+  die();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">

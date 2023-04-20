@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 19, 2023 at 06:14 AM
+-- Generation Time: Apr 20, 2023 at 05:02 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -31,10 +31,18 @@ CREATE TABLE `accounts` (
   `_id` int(11) NOT NULL,
   `user_name` varchar(300) NOT NULL,
   `email` varchar(300) NOT NULL,
-  `birthdate` date NOT NULL,
+  `birthdate` varchar(300) NOT NULL,
   `user_password` varchar(300) NOT NULL,
-  `valid_id_num` int(11) NOT NULL
+  `valid_id_num` int(11) NOT NULL,
+  `is_landlord` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`_id`, `user_name`, `email`, `birthdate`, `user_password`, `valid_id_num`, `is_landlord`) VALUES
+(4, 'Melvin Jones Repol', 'mrepol742@gmail.com', '2002-06-13', 'android', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -84,22 +92,6 @@ CREATE TABLE `room` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tenants`
---
-
-CREATE TABLE `tenants` (
-  `_id` int(11) NOT NULL,
-  `tenant_name` varchar(300) NOT NULL,
-  `email` varchar(300) NOT NULL,
-  `birthdate` date NOT NULL,
-  `location` varchar(300) NOT NULL,
-  `tenant_password` varchar(300) NOT NULL,
-  `valid_id_num` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `valid_id`
 --
 
@@ -138,12 +130,6 @@ ALTER TABLE `room`
   ADD PRIMARY KEY (`_id`);
 
 --
--- Indexes for table `tenants`
---
-ALTER TABLE `tenants`
-  ADD PRIMARY KEY (`_id`);
-
---
 -- Indexes for table `valid_id`
 --
 ALTER TABLE `valid_id`
@@ -157,7 +143,7 @@ ALTER TABLE `valid_id`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `price`
@@ -175,12 +161,6 @@ ALTER TABLE `rental`
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tenants`
---
-ALTER TABLE `tenants`
   MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

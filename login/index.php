@@ -1,9 +1,3 @@
-<!-- 
-    One our crud system finalize this page should not be visible and user cannot visit this when 
-he is logged on if he visited it'll be redirected to homepage
-
-    There are cases in different scales of device that the login-box may collide (near) with the navbar
--->
 <?php
 include("../include/session.php");
 
@@ -78,8 +72,8 @@ if (isLogin()) {
                     <input type="password" name="password"  placeholder="Password">
                 </div>
                 <div class="user-actions">
-                    <button class="btn" name="submit" type="submit">Login</button>
-                    <a href="../forgot-password/">Forgot password?</a>
+                    <button class="btn user" name="submit" type="submit">Login</button>
+                    <a href="../forgot-password/">Forgot password</a>
                 </div>
             </form>
         </div>

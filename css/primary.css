@@ -201,16 +201,16 @@ footer {
 }
 
 .first {
-    padding: 30px;
+    padding: 5%;
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
 }
 
 .second {
-    padding: 40px;
+    padding: 5%;
     margin-left: 3%;
     margin-right: 3%;
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.8);
     color: #000;
 }
 
@@ -222,17 +222,13 @@ section {
 }
 
 .ppct1 {
-    background-color: transparent;
-    transition: box-shadow .3s;
     padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-radius: 10px;
-    border: none;
 }
 
 .ppct:hover {
-    box-shadow: 0 0 5em rgba(0, 0, 0, .3);
+    box-shadow: 0 0 5em rgba(0, 0, 0, .2);
 }
 
 .offcanvas-title {
@@ -249,4 +245,14 @@ section {
 .offcanvas-body {
     padding: 0;
     margin-top: 10px;
+}
+
+.asd {
+    margin: 2%;
+    border: none;
+}
+
+.asd:hover {
+    margin: 3%;
+    transition: all 1s ease;
 }

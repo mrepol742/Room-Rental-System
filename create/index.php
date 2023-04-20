@@ -1,8 +1,3 @@
-<!-- 
-    One our crud system finalize this page should not be visible and user cannot visit this when 
-he is logged on if he visited it'll be redirected to homepage
--->
-
 <?php
 include("../include/session.php");
 
@@ -68,7 +63,7 @@ if (isLogin()) {
     </nav>
   </header>
         <div class="login-box">
-            <img src="../rrs-logo.webp" width="300" alt="Room Rental System">
+            <h1> <img src="../favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 40px !important;">Create Account</h1>
             <form action="<?php htmlspecialchars('php_self'); ?>" method="post">
                 <div class="user-box">
                     <input type="text" name="email" placeholder="Email (you@gmail.com)">
@@ -86,7 +81,9 @@ if (isLogin()) {
                     <input type="password" name="cpassword" placeholder="Re-type Password">
                 </div>
                 <div class="user-actions">
-                    <button class="btn" name="submit" type="submit">Create Account</button>
+                    <button class="btn user" name="submit_user" type="submit">As a User</button>
+                    <hr>
+                    <button class="btn landlord" name="submit_landlord" type="submit">As a Landlord</button>
                 </div>
             </form>
         </div>
@@ -131,14 +128,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 } else {
                     if ($_POST["password"] != $_POST["cpassword"]) {
                         echo '<script>showErr("Password did not match!")</script>';
-                    } else if (isset($_POST['submit'])) {
+                    } else if (isset($_POST['submit_user']) || isset($_POST['submit_landlord'])) {
                       $password = $_POST["password"];
                       $chemail = mysqli_query($conn, "SELECT * FROM accounts WHERE email= '" . $email . "'");
                       $check = mysqli_num_rows($chemail);
                       if ($check > 0) {
                         echo '<script>showErr("Email is already registered!")</script>';
                       } else {
-                          $sql = "INSERT INTO accounts (user_name, email, birthdate, user_password, valid_id_num) VALUES ('$name', '$email', '$birthdate', '$password', 1)";
+                          $sql = "INSERT INTO accounts (user_name, email, birthdate, user_password, valid_id_num) VALUES ";
+                          if (isset($_POST['submit_user'])) {
+                              $sql .= "('$name', '$email', '$birthdate', '$password', 1, 0)";
+                          } else {
+                              $sql .= "('$name', '$email', '$birthdate', '$password', 1, 1)";
+                          }
                           if ($conn->query($sql) === TRUE) {
                             // prompt a dialog for user to upload their identification cards for user verification
                             echo '<script>window.location.href = "../login"</script>';
