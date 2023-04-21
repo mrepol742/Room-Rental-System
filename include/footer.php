@@ -77,15 +77,7 @@
           
         </script>
         <script src="../assets/bootstrap.min.js"></script>
-<script src="../assets/lozad.min.js"></script>
 <script>
-    
-    /*
-* DO NOT MODIFY this code its use to speed up our system loading and increase performance 
-* by making sure the media such as images are lazy loaded
-*/
-        const observer = lozad();
-        observer.observe();
 /*
 * DO NOT MODIFY this code its use to speed up our system loading and increase performance 
 * caching the contents instead of loading it on the disk or on the server

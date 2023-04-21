@@ -88,7 +88,6 @@
         </div>
         </div>
         <script src="../assets/bootstrap.min.js"></script>
-<script src="../assets/lozad.min.js"></script>
 <script src="../js/login.js"></script>
     </body>
 </html>
