@@ -1,10 +1,10 @@
-<!-- 
-    When our crud system finalize this page should not be visible and user cannot visit this when 
-he is logged on if he visited it'll be redirected to homepage
--->
-
 <?php
 include("include/session.php");
+
+if ($_SESSION['user_type'] == 1) {
+  echo '<script>window.location.href = "admin"</script>';
+  die();
+}
 
 $account = $session_status = $session_action = "";
 
@@ -48,11 +48,12 @@ $session_action .= '<li><a class="dropdown-item" href="forgot-password"><svg xml
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top">
       <div class="container-fluid">
+      <div class="navbar-brand">
       <span class="navbar-toggler-icon sidebar" data-bs-toggle="offcanvas" href="#sidebarCanvas" role="button" aria-controls="sidebar" id="sidebarbb"></span>
-      <a class="navbar-brand" href="">
-          <img src="favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 25px !important;">
+      <a class="navbar-brand1" href="#">
           Room Rental System
         </a>
+</div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="qwe111">
           <span class="navbar-toggler-icon" id="qwe"></span>
@@ -427,6 +428,7 @@ $session_action .= '<li><a class="dropdown-item" href="forgot-password"><svg xml
       <section>
       
         <h2 class="text-center">Luxury Rooms For You</h2>
+        <br>
         <div class="card-group">
       <div class="card asd" style="border-radius: 10px;">
         <div class="card-body">

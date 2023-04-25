@@ -110,14 +110,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               while ($row = mysqli_fetch_assoc($check_email)) {
                   
                   $db_password = $row["user_password"];
+                  $db_user_type = $row["is_landlord"];
                   
                   if ($db_password == $password) {
                      
                       $_SESSION['user_login'] = true;
                       $_SESSION["email"] = $email;
                       $_SESSION["name"] = $row["user_name"];
-                      echo '<script>window.location.href = "../"</script>';
+                      $_SESSION["user_type"] = $db_user_type;
+
+
+                      if ($db_user_type == 0) {
+                        echo '<script>window.location.href = "../"</script>';
+                      } else {
+                        echo '<script>window.location.href = "../admin"</script>';
+                      }
                       die();
+
                   } else {
                       echo '<script>showErr("Email or Password incorrect!")</script>'; 
                   }

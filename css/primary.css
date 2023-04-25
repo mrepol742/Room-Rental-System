@@ -160,8 +160,7 @@ footer {
 
 .menuitem:hover {
     background: rgba(0, 0, 0, 0.1);
-    padding-left: 26px !important;
-   padding-right: 26px !important;
+   transition: all 0.5s ease;
  }
 
 .menuitem a{
@@ -210,7 +209,7 @@ footer {
     padding: 5%;
     margin-left: 3%;
     margin-right: 3%;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3);
     color: #000;
 }
 
@@ -234,12 +233,14 @@ section {
 .offcanvas-title {
     padding-right: 8px;
     padding-left: 8px;
+    transition: all 0.5s ease;
 }
 
 .offcanvas-title:hover {
     background: rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     border: none;
+    transition: all 0.5s ease;
 }
 
 .offcanvas-body {
@@ -248,11 +249,19 @@ section {
 }
 
 .asd {
-    margin: 2%;
     border: none;
+    transition: all 0.5s ease;
 }
 
 .asd:hover {
-    margin: 3%;
-    transition: all 1s ease;
+    box-shadow: 0 0 5em rgba(0, 0, 0, .2);
+    transition: all 0.5s ease;
+}
+
+.navbar-brand1 {
+   color: #fff;
+}
+
+.card-body {
+    padding: 5%;
 }

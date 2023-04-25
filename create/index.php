@@ -134,7 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                       if ($check > 0) {
                         echo '<script>showErr("Email is already registered!")</script>';
                       } else {
-                          $sql = "INSERT INTO accounts (user_name, email, birthdate, user_password, valid_id_num) VALUES ";
+                          $sql = "INSERT INTO accounts (user_name, email, birthdate, user_password, valid_id_num, is_landlord) VALUES ";
                           if (isset($_POST['submit_user'])) {
                               $sql .= "('$name', '$email', '$birthdate', '$password', 1, 0)";
                           } else {

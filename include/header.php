@@ -3,6 +3,11 @@ include("session.php");
 
 $account = $session_status = $session_action = "";
 
+if ($_SESSION['user_type'] == 1) {
+  echo '<script>window.location.href = "../admin"</script>';
+  die();
+}
+
 if (!isLogin()) {
   $account = '<li class="nav-item">
   <a class="nav-link anh" href="../create/">Create Account</a>
@@ -43,11 +48,12 @@ $session_action .= '<li><a class="dropdown-item" href="../forgot-password"><svg 
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top">
       <div class="container-fluid">
+      <div class="navbar-brand">
       <span class="navbar-toggler-icon sidebar" data-bs-toggle="offcanvas" href="#sidebarCanvas" role="button" aria-controls="sidebar" id="sidebarbb"></span>
-      <a class="navbar-brand" href="../">
-          <img src="../favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 25px !important;">
+      <a class="navbar-brand1" href="../">
           Room Rental System
         </a>
+</div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="qwe111">
           <span class="navbar-toggler-icon" id="qwe"></span>
