@@ -1,7 +1,7 @@
 <?php
 include("session.php");
 
-$account = $session_status = $session_action = "";
+$account = $session_status = $session_action = $cllp = "";
 
 if ($_SESSION['user_type'] == 1) {
   echo '<script>window.location.href = "../admin"</script>';
@@ -19,10 +19,57 @@ if (!isLogin()) {
   $session_status = "Not login";
   $session_action = '<li><a class="dropdown-item" href="../login"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>Login</title><path fill="#484848" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg>Login</a></li>';
   $session_action .= '<li><a class="dropdown-item" href="../create"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>account-plus</title><path fill="#484848" d="M15,14C12.33,14 7,15.33 7,18V20H23V18C23,15.33 17.67,14 15,14M6,10V7H4V10H1V12H4V15H6V12H9V10M15,12A4,4 0 0,0 19,8A4,4 0 0,0 15,4A4,4 0 0,0 11,8A4,4 0 0,0 15,12Z" /></svg>Create Account</a></li>';
+  $cllp = ' <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarText">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-auto text-md-center text-left">
+  <li class="nav-item">
+      <a class="nav-link" href="rooms">Rooms</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pricing">Pricing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="categories">Categories</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="about">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="contactus">Contact Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="faq">Faq</a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">
+  ' . $account .'
+  </ul>
+</div>';
 } else {
   $session_status = $_SESSION['name'];
   $session_action = '<li><a class="dropdown-item" href="../logout"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>logout</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Logout</a></li>';
   $session_action .= '<li><a class="dropdown-item" href="../change-password"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>change password</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Change Password</a></li>';
+  $cllp = '<div class="collapse navbar-collapse" id="navbarText">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+  <li class="nav-item">
+      <a class="nav-link" href="rooms">Rooms</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pricing">Pricing</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="categories">Categories</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="about">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="contactus">Contact Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="faq">Faq</a>
+    </li>
+  </ul>
+</div>';
 }
 
 $session_action .= '<li><a class="dropdown-item" href="../forgot-password"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>forgot password</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Forgot Password</a></li>';
@@ -45,8 +92,7 @@ $session_action .= '<li><a class="dropdown-item" href="../forgot-password"><svg 
         <title><?php echo $page_title; ?></title>
     </head>
     <body>
-    <header>
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top">
+    <nav class="autohide navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container-fluid">
       <div class="navbar-brand">
       <span class="navbar-toggler-icon sidebar" data-bs-toggle="offcanvas" href="#sidebarCanvas" role="button" aria-controls="sidebar" id="sidebarbb"></span>
@@ -58,32 +104,9 @@ $session_action .= '<li><a class="dropdown-item" href="../forgot-password"><svg 
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="qwe111">
           <span class="navbar-toggler-icon" id="qwe"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-              <a class="nav-link" href="../rooms" id="rooms">Rooms</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../pricing" id="pricing">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../categories" id="categories">Categories</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../about" id="about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../contactus" id="contactus">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../faq" id="faq">Faq</a>
-            </li>
-            <?php echo $account; ?> 
-          </ul>
-        </div>
+        <?php echo $cllp; ?> 
       </div>
     </nav>
-  </header>
 
   <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarCanvas" aria-labelledby="sidebar">
   <div class="offcanvas-header">
