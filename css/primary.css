@@ -71,13 +71,7 @@ nav {
 }
 
 .offcanvas {
-    background: #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-    z-index: 99999;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border: none;
-    transition: all 0.4s ease;
+    background: rgb(33,37,41);
 }
 
 @media (max-width:1080px) {
@@ -163,8 +157,8 @@ footer {
    transition: all 0.5s ease;
  }
 
-.menuitem a{
-    color: #000 !important;
+.menuitem a {
+    color: #fff !important;
 }
 
 ::-webkit-scrollbar {
@@ -190,12 +184,9 @@ footer {
 }
 
 .offcanvas-header {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     height: 180px;
     background: url("../backgrounds/a1.jpg") no-repeat fixed right;
     background-size:150%;
-    border-top-right-radius: 15px;
-    border: none;
     align-items: flex-start;
 }
 
@@ -213,7 +204,7 @@ footer {
     color: #000;
 }
 
-section {
+.lux {
     margin-top: 8%;
     background-color: #fff;
     color: #000;
@@ -286,4 +277,19 @@ main {
     main {
         padding-top: 15% !important;
     }
+}
+
+.navbar-toggler-icon {
+    background-image: url('../hamburger.svg');
+}
+
+.bg-dark {
+    background: rgba(0, 0, 0, 0.8) !important;
+}
+
+.fixed-top1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
