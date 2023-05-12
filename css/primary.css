@@ -185,8 +185,8 @@ footer {
 
 .offcanvas-header {
     height: 180px;
-    background: url("../backgrounds/a1.jpg") no-repeat fixed right;
-    background-size:150%;
+    background: url("../backgrounds/a1.jpg") no-repeat;
+    background-size: cover;
     align-items: flex-start;
 }
 
