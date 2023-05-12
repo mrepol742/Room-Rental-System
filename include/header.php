@@ -22,22 +22,22 @@ if (!isLogin()) {
   $cllp = ' <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarText">
   <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-auto text-md-center text-left">
   <li class="nav-item">
-      <a class="nav-link" href="../rooms">Rooms</a>
+      <a class="nav-link" href="../rooms" id="rooms">Rooms</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../pricing">Pricing</a>
+      <a class="nav-link" href="../pricing" id="pricing">Pricing</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../categories">Categories</a>
+      <a class="nav-link" href="../categories" id="categories">Categories</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../about">About</a>
+      <a class="nav-link" href="../about" id="about">About</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../contactus">Contact Us</a>
+      <a class="nav-link" href="../contactus" id="contactus">Contact Us</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../faq">Faq</a>
+      <a class="nav-link" href="../faq" id="faq">Faq</a>
     </li>
   </ul>
   <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">
@@ -121,13 +121,38 @@ $session_action .= '<li><a class="dropdown-item" href="../forgot-password"><svg 
   </div>
   <div class="offcanvas-body">
   <ul class="menu">
-        <li class="menuitem" ><a href="../rooms"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Rooms</title><path fill="#fff" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg>Rooms</a></li>
-        <li class="menuitem" ><a href="../pricing"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Pricing</title><path fill="#fff" d="M7,15H9C9,16.08 10.37,17 12,17C13.63,17 15,16.08 15,15C15,13.9 13.96,13.5 11.76,12.97C9.64,12.44 7,11.78 7,9C7,7.21 8.47,5.69 10.5,5.18V3H13.5V5.18C15.53,5.69 17,7.21 17,9H15C15,7.92 13.63,7 12,7C10.37,7 9,7.92 9,9C9,10.1 10.04,10.5 12.24,11.03C14.36,11.56 17,12.22 17,15C17,16.79 15.53,18.31 13.5,18.82V21H10.5V18.82C8.47,18.31 7,16.79 7,15Z" /></svg>Pricing</a></li>
-        <li class="menuitem"><a href="../locations"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Locations</title><path fill="#fff"  d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" /></svg>Locations</a></li>
-        <li class="menuitem" ><a href="../landlords"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Landlords</title><path fill="#fff" d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" /></svg>Landlord</a></li>
-        <li class="menuitem" ><a href="../amenity"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Amnenity</title><path fill="#fff" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>Amnenity</a></li>
-        <li class="menuitem"><a href="../chat-with-us"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Chat with Us</title><path  fill="#fff" d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>Chat with Us</a></li>
-      </ul>
+        <li class="menuitem" id="rooms1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Rooms</title><path fill="#fff" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg>Rooms</li>
+        <li class="menuitem" id="pricing1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Pricing</title><path fill="#fff" d="M7,15H9C9,16.08 10.37,17 12,17C13.63,17 15,16.08 15,15C15,13.9 13.96,13.5 11.76,12.97C9.64,12.44 7,11.78 7,9C7,7.21 8.47,5.69 10.5,5.18V3H13.5V5.18C15.53,5.69 17,7.21 17,9H15C15,7.92 13.63,7 12,7C10.37,7 9,7.92 9,9C9,10.1 10.04,10.5 12.24,11.03C14.36,11.56 17,12.22 17,15C17,16.79 15.53,18.31 13.5,18.82V21H10.5V18.82C8.47,18.31 7,16.79 7,15Z" /></svg>Pricing</li>
+        <li class="menuitem" id="locations1" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Locations</title><path fill="#fff"  d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" /></svg>Locations</li>
+        <li class="menuitem" id="landlords1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Landlords</title><path fill="#fff" d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" /></svg>Landlord</li>
+        <li class="menuitem" id="amenity1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Amnenity</title><path fill="#fff" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>Amnenity</li>
+        <li class="menuitem" id="chat_with_us1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Chat with Us</title><path  fill="#fff" d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>Chat with Us</li>
+        <script>
+          rooms1.addEventListener('click', function() {
+            window.location.href = '../rooms';
+          });
+          pricing1.addEventListener('click', function() {
+            window.location.href = '../pricing';
+          });
 
+          locations1.addEventListener('click', function() {
+            window.location.href = '../locations';
+          });
+
+          landlords1.addEventListener('click', function() {
+            window.location.href = '../landlords';
+          });
+
+          amenity1.addEventListener('click', function() {
+            window.location.href = '../amenity';
+          });
+
+          chat_with_us1.addEventListener('click', function() {
+            window.location.href = '../chat-with-us';
+          });
+
+
+        </script>
+      </ul>
   </div>
 </div>

@@ -36,22 +36,22 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-              <a class="nav-link" href="../#">Rooms</a>
+              <a class="nav-link" href="../rooms">Rooms</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../#">Pricing</a>
+              <a class="nav-link" href="../pricing">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../#">Categories</a>
+              <a class="nav-link" href="../categories">Categories</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../#">About</a>
+              <a class="nav-link" href="../about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../#">Contact Us</a>
+              <a class="nav-link" href="../contactus">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../#">Faq</a>
+              <a class="nav-link" href="../faq">Faq</a>
             </li>
           </ul>
         </div>
@@ -74,7 +74,7 @@
                     <input type="password" name="npassword"  placeholder="Confirm Password">
                 </div>
                 <div class="user-actions">
-                    <button class="btn" name="submit" type="submit">Forgot Password</button>
+                    <button class="btn user" name="submit" type="submit">Forgot Password</button>
                 </div>
             </form>
         </div>
