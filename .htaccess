@@ -1,1 +1,1 @@
-ErrorDocument 404 404.php
+ErrorDocument 404 /Room-Rental-System/404.php

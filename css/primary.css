@@ -270,17 +270,6 @@ footer {
     transition: all 0.3s ease-in-out;
 }
 
-main {
-    padding-top: 3.7% !important;
-}
-
-@media (max-width:1080px) {
-
-    main {
-        padding-top: 15% !important;
-    }
-}
-
 .navbar-toggler-icon {
     background-image: url('../hamburger.svg');
 }

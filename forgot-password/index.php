@@ -1,10 +1,3 @@
-<!-- 
-    This thing should firstly check the user credentials before changing it
-    Ask user about his email, password
-    then using modal to prompt for new password & confirm password
-    before saving to database
--->
-
 <!DOCTYPE html>
 <html lang="en">
     <head>

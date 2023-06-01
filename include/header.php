@@ -3,11 +3,6 @@ include("session.php");
 
 $account = $session_status = $session_action = $cllp = "";
 
-if ($_SESSION['user_type'] == 1) {
-  echo '<script>window.location.href = "../admin"</script>';
-  die();
-}
-
 if (!isLogin()) {
   $account = '<li class="nav-item">
   <a class="nav-link anh" href="../create/">Create Account</a>
@@ -40,7 +35,7 @@ if (!isLogin()) {
       <a class="nav-link" href="../faq" id="faq">Faq</a>
     </li>
   </ul>
-  <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">
+  <ul class="nav navbar-nav justify-content-md-center justify-content-start flex-nowrap">
   ' . $account .'
   </ul>
 </div>';
@@ -97,7 +92,7 @@ $session_action .= '<li><a class="dropdown-item" href="../forgot-password"><svg 
       <div class="navbar-brand">
       <span class="navbar-toggler-icon sidebar" data-bs-toggle="offcanvas" href="#sidebarCanvas" role="button" aria-controls="sidebar" id="sidebarbb"></span>
       <a class="navbar-brand1" href="../">
-          Room Rental System
+          Home
         </a>
 </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -121,15 +116,24 @@ $session_action .= '<li><a class="dropdown-item" href="../forgot-password"><svg 
   </div>
   <div class="offcanvas-body">
   <ul class="menu">
-        <li class="menuitem" id="rooms1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Rooms</title><path fill="#fff" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg>Rooms</li>
+        <li class="menuitem" id="home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Home</title><path fill="#fff" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg>Rooms</li>
+        <li class="menuitem" id="rooms1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 26px; margin-right: 10px;"><title>Rooms</title><path  fill="#fff" d="M5 9.15V7C5 5.9 5.9 5 7 5H17C18.1 5 19 5.9 19 7V9.16C17.84 9.57 17 10.67 17 11.97V14H7V11.96C7 10.67 6.16 9.56 5 9.15M20 10C18.9 10 18 10.9 18 12V15H6V12C6 10.9 5.11 10 4 10S2 10.9 2 12V17C2 18.1 2.9 19 4 19V21H6V19H18V21H20V19C21.1 19 22 18.1 22 17V12C22 10.9 21.1 10 20 10Z" /></svg>Rooms</li>
         <li class="menuitem" id="pricing1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Pricing</title><path fill="#fff" d="M7,15H9C9,16.08 10.37,17 12,17C13.63,17 15,16.08 15,15C15,13.9 13.96,13.5 11.76,12.97C9.64,12.44 7,11.78 7,9C7,7.21 8.47,5.69 10.5,5.18V3H13.5V5.18C15.53,5.69 17,7.21 17,9H15C15,7.92 13.63,7 12,7C10.37,7 9,7.92 9,9C9,10.1 10.04,10.5 12.24,11.03C14.36,11.56 17,12.22 17,15C17,16.79 15.53,18.31 13.5,18.82V21H10.5V18.82C8.47,18.31 7,16.79 7,15Z" /></svg>Pricing</li>
         <li class="menuitem" id="locations1" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Locations</title><path fill="#fff"  d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" /></svg>Locations</li>
         <li class="menuitem" id="landlords1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Landlords</title><path fill="#fff" d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" /></svg>Landlord</li>
         <li class="menuitem" id="amenity1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Amnenity</title><path fill="#fff" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>Amnenity</li>
         <li class="menuitem" id="chat_with_us1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Chat with Us</title><path  fill="#fff" d="M12,3C17.5,3 22,6.58 22,11C22,15.42 17.5,19 12,19C10.76,19 9.57,18.82 8.47,18.5C5.55,21 2,21 2,21C4.33,18.67 4.7,17.1 4.75,16.5C3.05,15.07 2,13.13 2,11C2,6.58 6.5,3 12,3Z" /></svg>Chat with Us</li>
+        <?php
+           if ($_SESSION['user_type'] == 1) {
+              echo  '<li class="menuitem" id="dashboard"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Dashboard</title><path fill="#fff"  d="M13,3V9H21V3M13,21H21V11H13M3,21H11V15H3M3,13H11V3H3V13Z" /></svg>Dashboard</li>';
+           }
+        ?>
         <script>
           rooms1.addEventListener('click', function() {
             window.location.href = '../rooms';
+          });
+          home.addEventListener('click', function() {
+            window.location.href = '../';
           });
           pricing1.addEventListener('click', function() {
             window.location.href = '../pricing';
@@ -151,6 +155,11 @@ $session_action .= '<li><a class="dropdown-item" href="../forgot-password"><svg 
             window.location.href = '../chat-with-us';
           });
 
+          try {
+          dashboard.addEventListener('click', function() {
+            window.location.href = '../dashboard';
+          });
+        } catch (err) {}
 
         </script>
       </ul>

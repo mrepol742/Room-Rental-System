@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                       if ($db_user_type == 0) {
                         echo '<script>window.location.href = "../"</script>';
                       } else {
-                        echo '<script>window.location.href = "../admin"</script>';
+                        echo '<script>window.location.href = "../dashboard"</script>';
                       }
                       die();
 
