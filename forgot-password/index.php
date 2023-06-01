@@ -1,3 +1,12 @@
+<?php
+include("../include/session.php");
+
+if (isLogin()) {
+  echo '<script>window.location.href = "../change-password"</script>';
+  die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -58,8 +67,22 @@
                     <input type="text" name="email" placeholder="Email">
                 </div>
                 <div class="user-box">
-                    <input type="text" name="code"  placeholder="Enter Code">
+                <span style="color: #fff; float: right;" name="sdc" id="sdc">Send Code</span>
                 </div>
+                <div class="user-box">
+                    <input type="number" name="code"  placeholder="Enter Code">
+                </div>
+                <div class="user-box" style="display: none;">
+                    <input type="number" name="ffcode"  placeholder="" id="ffcode">
+                </div>
+
+                <script>
+                  let code = Math.floor(100000 + Math.random() * 900000);
+          sdc.addEventListener('click', function() {
+            alert("Your 6 digit code is " + code + " DO NOT SHARE THIS TO ANYONE.")
+          });
+ffcode.value = code;
+                  </script>
                 <div class="user-box">
                     <input type="text" name="password"  placeholder="New Password">
                 </div>
@@ -88,28 +111,44 @@
 <?php
 include("../include/connections.php");
 
-$email = $password = "";
+$email = $$npassword = $npassword = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
- 
-    if (empty($_POST["email"])) {
+  
+  $email = $_POST["email"];
+  $code = $_POST["ffcode"];
+  echo $code;
+  $code2 = $_POST["code"];
+    if (empty($email)) {
         echo '<script>showErr("Email is required!")</script>';
+        return;
     } else {
-         $email = $_POST["email"];
-        if (empty($_POST["password"])) {
-          echo '<script>showErr("You need to enter your new password!")</script>';
-        } else {
+        
+
+         $check_email = mysqli_query($conn, "SELECT * FROM accounts where email = '$email'");
+         if (mysqli_num_rows($check_email) > 0) {
           $password = $_POST["password"];
-            if (empty($_POST["npassword"])) {
-                echo '<script>showErr("You need to enter your new password!")</script>';
-            } else {
-                if ($_POST["password"] != $_POST["npassword"]) {
-                    echo '<script>showErr("Password did not match!")</script>';
-                } else if (isset($_POST['submit'])) {
-                    echo '<script>window.location.href = "../login"</script>';
-                    die();
-                }
-            }
-        }
+              if (empty($code2)) {
+                echo '<script>showErr("Code is required!")</script>';
+              } else if ($code != $code2) {
+                echo '<script>showErr("Invalid Code!")</script>';
+              } else if (empty($password)) {
+            echo '<script>showErr("You need to enter your new password!")</script>';
+          } else {
+      $npassword = $_POST["npassword"];
+              if (empty($npassword)) {
+                  echo '<script>showErr("You need to enter your new password!")</script>';
+              } else {
+                  if ($password != $npassword) {
+                      echo '<script>showErr("Password did not match!")</script>';
+                  } else if (isset($_POST['submit'])) {
+                      echo '<script>window.location.href = "../login"</script>';
+                      die();
+                  }
+              }
+          }
+          } else {
+            echo '<script>showErr("The email you enter is not registered yet!")</script>';
+          }
     }
 }
 ?>

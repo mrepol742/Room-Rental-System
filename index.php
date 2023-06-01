@@ -14,6 +14,7 @@ if (!isLogin()) {
   $session_status = "Not login";
   $session_action = '<li><a class="dropdown-item" href="login"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>Login</title><path fill="#484848" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" /></svg>Login</a></li>';
   $session_action .= '<li><a class="dropdown-item" href="create"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>account-plus</title><path fill="#484848" d="M15,14C12.33,14 7,15.33 7,18V20H23V18C23,15.33 17.67,14 15,14M6,10V7H4V10H1V12H4V15H6V12H9V10M15,12A4,4 0 0,0 19,8A4,4 0 0,0 15,4A4,4 0 0,0 11,8A4,4 0 0,0 15,12Z" /></svg>Create Account</a></li>';
+  $session_action .= '<li><a class="dropdown-item" href="forgot-password"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>forgot password</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Forgot Password</a></li>';
   $cllp = ' <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarText">
   <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-auto text-md-center text-left">
   <li class="nav-item">
@@ -67,8 +68,6 @@ if (!isLogin()) {
   </ul>
 </div>';
 }
-
-$session_action .= '<li><a class="dropdown-item" href="forgot-password"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 24px; margin-right: 10px;"><title>forgot password</title><path  fill="#484848" d="M16,17V14H9V10H16V7L21,12L16,17M14,2A2,2 0 0,1 16,4V6H14V4H5V20H14V18H16V20A2,2 0 0,1 14,22H5A2,2 0 0,1 3,20V4A2,2 0 0,1 5,2H14Z" /></svg>Forgot Password</a></li>';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -186,7 +185,7 @@ $session_action .= '<li><a class="dropdown-item" href="forgot-password"><svg xml
           </div>
         </div>
       </div>
-      <div class="card-group" style="margin-top: -12%; padding: 5%;">
+      <div class="card-group" style="margin-top: -15%; padding: 5%;">
       <div class="card asd" style="border-radius: 10px; margin: 10px;">
         <div class="card-body">
         <img loading="lazy" src="backgrounds/a1.jpg"

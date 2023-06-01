@@ -1,4 +1,5 @@
 <?php
+ error_reporting(0);
  
  if (is_session_started() === FALSE ) session_start();
 

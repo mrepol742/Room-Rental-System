@@ -1,8 +1,8 @@
 <?php
 include("../include/session.php");
 
-if (isLogin()) {
-  echo '<script>window.location.href = "../"</script>';
+if (!isLogin()) {
+  echo '<script>window.location.href = "../forgot-password"</script>';
   die();
 }
 ?>
@@ -99,33 +99,47 @@ include("../include/connections.php");
 
 $email = $password = $npassword = "";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
- 
-    if (empty($_POST["email"])) {
+    $email = $_POST["email"];
+    if (empty($email)) {
         echo '<script>showErr("Email is required!")</script>';
     } else {
-        if (empty($_POST["password"])) {
+        $password = $_POST["password"];
+        if (empty($password)) {
             echo '<script>showErr("You need to type your previous password!")</script>';
         } else {
-            if (empty($_POST["npassword"])) {
-                echo '<script>showErr("You need to enter your new password!")</script>';
-            } else {
-              if (empty($_POST["cpassword"])) {
-                echo '<script>showErr("You need to retype your password again!")</script>';
-            } else {
-                if ($_POST["npassword"] != $_POST["cpassword"]) {
-                    echo '<script>showErr("Password did not match!")</script>';
-                } else if (isset($_POST['submit'])) {
-                  if ($password == $npassword) {
-                    echo '<script>showErr("You cannot use your previous password as new one!")</script>';
+          $check_email = mysqli_query($conn, "SELECT * FROM accounts where email = '$email'");
+          if (mysqli_num_rows($check_email) > 0) {
+              while ($row = mysqli_fetch_assoc($check_email)) {
+                  
+                  $db_password = $row["user_password"];
+                  if ($password != $db_password) {
+                    echo '<script>showErr("That is not your previous password!")</script>';
                   } else {
-                    // save to database
-                    
-                    echo '<script>window.location.href = "../login"</script>';
-                    die();
+                    if (empty($_POST["npassword"])) {
+                      echo '<script>showErr("You need to enter your new password!")</script>';
+                  } else {
+                    $npassword = $_POST["cpassword"];
+                    if (empty($npassword)) {
+                      echo '<script>showErr("You need to retype your password again!")</script>';
+                  } else {
+                      if ($_POST["npassword"] != $npassword) {
+                          echo '<script>showErr("Password did not match!")</script>';
+                      } else if (isset($_POST['submit'])) {
+                        if ($password == $npassword) {
+                          echo '<script>showErr("You cannot use your previous password as new one!")</script>';
+                        } else {
+                          $sql = "UPDATE accounts SET user_password = '$npassword' WHERE email = '$email'";
+                          if ($conn->query($sql)) {
+                            echo '<script>window.location.href = "../"</script>';
+                            die();
+                          }
+                        }
+                      }
+                    }
                   }
-                }
+                  }
               }
-            }
+           }
         }
     }
 }
