@@ -35,6 +35,11 @@ a {
     transition: all 1s ease;
 }
 
+.qwer2 {
+    background-color: #4286f460;
+    transition: all 0.5s ease;
+}
+
 .active {
    color: #4285f4 !important;
    font-weight: 600;
@@ -243,6 +248,7 @@ footer {
 
 .asd {
     border: none;
+    margin: 3px;
     transition: all 0.5s ease;
 }
 

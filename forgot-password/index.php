@@ -67,7 +67,7 @@ if (isLogin()) {
                     <input type="text" name="email" placeholder="Email">
                 </div>
                 <div class="user-box">
-                <span style="color: #fff; float: right;" name="sdc" id="sdc">Send Code</span>
+                <span style="color: #fff;" name="sdc" id="sdc">Send Code</span>
                 </div>
                 <div class="user-box">
                     <input type="number" name="code"  placeholder="Enter Code">
@@ -78,7 +78,7 @@ if (isLogin()) {
 
                 <script>
                   let code = Math.floor(100000 + Math.random() * 900000);
-          sdc.addEventListener('click', function() {
+                  sdc.addEventListener('click', function() {
             alert("Your 6 digit code is " + code + " DO NOT SHARE THIS TO ANYONE.")
           });
 ffcode.value = code;
@@ -116,7 +116,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   
   $email = $_POST["email"];
   $code = $_POST["ffcode"];
-  echo $code;
   $code2 = $_POST["code"];
     if (empty($email)) {
         echo '<script>showErr("Email is required!")</script>';

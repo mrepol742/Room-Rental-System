@@ -186,111 +186,108 @@ if (!isLogin()) {
         </div>
       </div>
       <div class="card-group" style="margin-top: -15%; padding: 5%;">
-      <div class="card asd" style="border-radius: 10px; margin: 10px;">
+      <div class="card asd" style="border-radius: 10px; margin: 5px; background: transparent;">
         <div class="card-body">
         <img loading="lazy" src="backgrounds/a1.jpg"
-          class="rounded mx-auto d-block img-fluid" alt="" width="400">
+          class="rounded mx-auto d-block img-fluid" alt="" width="500">
           <h5 class="card-title"></h5>
-          <p class="card-text"><small class="text-muted">55$ a Night</small></p>
         </div>
       </div>
-      <div class="card asd" style="border-radius: 10px; margin: 10px;">
+      <div class="card asd" style="border-radius: 10px; margin: 5px; background: transparent;">
         <div class="card-body">
         <img loading="lazy" src="backgrounds/a2.jpg"
-          class="rounded mx-auto d-block img-fluid" alt="" width="400">
+          class="rounded mx-auto d-block img-fluid" alt="" width="500">
           <h5 class="card-title"></h5>
-          <p class="card-text"><small class="text-muted">80$ a Night</small></p>
         </div>
       </div>
-      <div class="card asd" style="border-radius: 10px; margin: 10px;">
+      <div class="card asd"  style="border-radius: 10px; margin: 5px; background: transparent;">
         <div class="card-body">
         <img loading="lazy" src="backgrounds/a3.jpg"
-          class="rounded mx-auto d-block img-fluid" alt="" width="400">
+          class="rounded mx-auto d-block img-fluid" alt="" width="500">
           <h5 class="card-title"></h5>
-          <p class="card-text"><small class="text-muted">250$ a Night</small></p>
         </div>
       </div>
     </div>
 </header>
      
       <div class="lux">
-        <h2 class="text-center">Luxury Rooms For You</h2>
+        <h2 class="text-center">Available Rooms</h2>
         <br>
         <div class="card-group">
-      <div class="card asd" style="border-radius: 10px;">
+      <div class="card asd qwer" style="border-radius: 10px;">
         <div class="card-body">
         <img loading="lazy" src="backgrounds/a1.jpg"
           class="rounded mx-auto d-block img-fluid" alt="" width="400">
           <h5 class="card-title"></h5>
-          <p class="card-text"><small class="text-muted">55$ a Night</small></p>
+          <p class="card-text"><small class="text-muted">2 Bedrooms &#183; New York</small></p>
         </div>
       </div>
-      <div class="card asd" style="border-radius: 10px;">
+      <div class="card asd qwer" style="border-radius: 10px;">
         <div class="card-body">
         <img loading="lazy" src="backgrounds/a2.jpg"
           class="rounded mx-auto d-block img-fluid" alt="" width="400">
           <h5 class="card-title"></h5>
-          <p class="card-text"><small class="text-muted">80$ a Night</small></p>
+          <p class="card-text"><small class="text-muted">3 Bedrooms &#183; San Fransico</small></p>
         </div>
       </div>
-      <div class="card asd" style="border-radius: 10px;">
+      <div class="card asd qwer" style="border-radius: 10px;">
         <div class="card-body">
         <img loading="lazy" src="backgrounds/a3.jpg"
           class="rounded mx-auto d-block img-fluid" alt="" width="400">
           <h5 class="card-title"></h5>
-          <p class="card-text"><small class="text-muted">250$ a Night</small></p>
+          <p class="card-text"><small class="text-muted">1 Bedroom  &#183; New York</small></p>
         </div>
       </div>
     </div>
     <div class="card-group">
-      <div class="card asd" style="border-radius: 10px;">
+      <div class="card asd qwer" style="border-radius: 10px;">
         <div class="card-body">
         <img loading="lazy" src="backgrounds/a4.jpg"
           class="rounded mx-auto d-block img-fluid" alt="" width="400">
           <h5 class="card-title"></h5>
-          <p class="card-text"><small class="text-muted">55$ a Night</small></p>
+          <p class="card-text"><small class="text-muted">2 Bedrooms  &#183; New York</small></p>
         </div>
       </div>
-      <div class="card asd" style="border-radius: 10px;">
+      <div class="card asd qwer" style="border-radius: 10px;">
         <div class="card-body">
         <img loading="lazy" src="backgrounds/a5.jpg"
           class="rounded mx-auto d-block img-fluid" alt="" width="400">
           <h5 class="card-title"></h5>
-          <p class="card-text"><small class="text-muted">80$ a Night</small></p>
+          <p class="card-text"><small class="text-muted">2 Bedrooms &#183; Washington DC</small></p>
         </div>
       </div>
-      <div class="card asd" style="border-radius: 10px;">
+      <div class="card asd qwer" style="border-radius: 10px;">
         <div class="card-body">
         <img loading="lazy" src="backgrounds/a6.jpg"
           class="rounded mx-auto d-block img-fluid" alt="" width="400">
           <h5 class="card-title"></h5>
-          <p class="card-text"><small class="text-muted">250$ a Night</small></p>
+          <p class="card-text"><small class="text-muted">1 Bedroom &#183; California</small></p>
         </div>
       </div>
     </div>
     <div class="card-group">
-      <div class="card asd" style="border-radius: 10px;">
+      <div class="card asd qwer" style="border-radius: 10px;">
         <div class="card-body">
         <img loading="lazy" src="backgrounds/a7.jpg"
           class="rounded mx-auto d-block img-fluid" alt="" width="400">
           <h5 class="card-title"></h5>
-          <p class="card-text"><small class="text-muted">55$ a Night</small></p>
+          <p class="card-text"><small class="text-muted">3 Bedrooms &#183; California</small></p>
         </div>
       </div>
-      <div class="card asd" style="border-radius: 10px;">
+      <div class="card asd qwer" style="border-radius: 10px;">
         <div class="card-body">
         <img loading="lazy" src="backgrounds/a8.jpg"
           class="rounded mx-auto d-block img-fluid" alt="" width="400">
           <h5 class="card-title"></h5>
-          <p class="card-text"><small class="text-muted">80$ a Night</small></p>
+          <p class="card-text"><small class="text-muted">2 Bedrooms &#183; New York</small></p>
         </div>
       </div>
-      <div class="card asd" style="border-radius: 10px;">
+      <div class="card asd qwer" style="border-radius: 10px;">
         <div class="card-body">
         <img loading="lazy" src="backgrounds/a9.jpg"
           class="rounded mx-auto d-block img-fluid" alt="" width="400">
           <h5 class="card-title"></h5>
-          <p class="card-text"><small class="text-muted">250$ a Night</small></p>
+          <p class="card-text"><small class="text-muted">2 Bedrooms &#183; New York</small></p>
         </div>
       </div>
     </div>
@@ -351,7 +348,21 @@ if (!isLogin()) {
   </footer>
   <script src="js/primary.js"></script>
         <script src="assets/bootstrap.min.js"></script>
-    
+        <script>
+          
+          document.addEventListener("DOMContentLoaded", function(){
+            [...document.querySelectorAll('.lux > div > div')].forEach(element => {
+   element.addEventListener('click', () => {
+    if (element.classList.contains("qwer2")) {
+      element.classList.remove("qwer2")
+    } else {
+       element.classList.add("qwer2")
+    }
+   });
+ });
+
+});
+  </script>
     </body>
 </html>
 
