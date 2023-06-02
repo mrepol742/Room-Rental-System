@@ -33,7 +33,6 @@ CREATE TABLE `accounts` (
   `email` varchar(300) NOT NULL,
   `birthdate` varchar(300) NOT NULL,
   `user_password` varchar(300) NOT NULL,
-  `valid_id_num` int(11) NOT NULL,
   `is_landlord` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -41,8 +40,11 @@ CREATE TABLE `accounts` (
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`_id`, `user_name`, `email`, `birthdate`, `user_password`, `valid_id_num`, `is_landlord`) VALUES
-(4, 'Melvin Jones Repol', 'mrepol742@gmail.com', '2002-06-13', 'android', 1, 0);
+INSERT INTO `accounts` (`_id`, `user_name`, `email`, `birthdate`, `user_password`, `is_landlord`) VALUES
+(0, 'user', 'user@gmail.com', '2002-06-13', 'user', 1, 0);
+
+INSERT INTO `accounts` (`_id`, `user_name`, `email`, `birthdate`, `user_password`, `is_landlord`) VALUES
+(0, 'admin', 'admin@gmail.com', '2002-06-13', 'admin', 1, 1);
 
 -- --------------------------------------------------------
 

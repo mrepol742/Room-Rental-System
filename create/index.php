@@ -81,9 +81,7 @@ if (isLogin()) {
                     <input type="password" name="cpassword" placeholder="Re-type Password">
                 </div>
                 <div class="user-actions">
-                    <button class="btn user" name="submit_user" type="submit">As a User</button>
-                    <hr>
-                    <button class="btn landlord" name="submit_landlord" type="submit">As a Landlord</button>
+                    <button class="btn user" name="submit_user" type="submit">Create Account</button>
                 </div>
             </form>
         </div>
@@ -134,12 +132,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                       if ($check > 0) {
                         echo '<script>showErr("Email is already registered!")</script>';
                       } else {
-                          $sql = "INSERT INTO accounts (user_name, email, birthdate, user_password, valid_id_num, is_landlord) VALUES ";
-                          if (isset($_POST['submit_user'])) {
-                              $sql .= "('$name', '$email', '$birthdate', '$password', 1, 0)";
-                          } else {
-                              $sql .= "('$name', '$email', '$birthdate', '$password', 1, 1)";
-                          }
+                          $sql = "INSERT INTO accounts (user_name, email, birthdate, user_password, is_landlord) VALUES ";
+                          $sql .= "('$name', '$email', '$birthdate', '$password', 1, 0)";
                           if ($conn->query($sql) === TRUE) {
                             // prompt a dialog for user to upload their identification cards for user verification
                             echo '<script>window.location.href = "../login"</script>';

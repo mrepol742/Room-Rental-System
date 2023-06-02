@@ -46,22 +46,22 @@ if (!isLogin()) {
   $cllp = '<div class="collapse navbar-collapse" id="navbarText">
   <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
   <li class="nav-item">
-      <a class="nav-link" href="../rooms">Rooms</a>
+      <a class="nav-link" href="../rooms" id="rooms">Rooms</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../pricing">Pricing</a>
+      <a class="nav-link" href="../pricing" id="pricing">Pricing</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../categories">Categories</a>
+      <a class="nav-link" href="../categories" id="categories">Categories</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../about">About</a>
+      <a class="nav-link" href="../about" id="about">About</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../contactus">Contact Us</a>
+      <a class="nav-link" href="../contactus" id="contactus">Contact Us</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../faq">Faq</a>
+      <a class="nav-link" href="../faq" id="faq">Faq</a>
     </li>
   </ul>
 </div>';
@@ -116,7 +116,7 @@ $session_action .= '<li><a class="dropdown-item" href="../forgot-password"><svg 
   </div>
   <div class="offcanvas-body">
   <ul class="menu">
-        <li class="menuitem" id="home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Home</title><path fill="#fff" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg>Rooms</li>
+        <li class="menuitem" id="home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Home</title><path fill="#fff" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg>Home</li>
         <li class="menuitem" id="rooms1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  style="width: 26px; margin-right: 10px;"><title>Rooms</title><path  fill="#fff" d="M5 9.15V7C5 5.9 5.9 5 7 5H17C18.1 5 19 5.9 19 7V9.16C17.84 9.57 17 10.67 17 11.97V14H7V11.96C7 10.67 6.16 9.56 5 9.15M20 10C18.9 10 18 10.9 18 12V15H6V12C6 10.9 5.11 10 4 10S2 10.9 2 12V17C2 18.1 2.9 19 4 19V21H6V19H18V21H20V19C21.1 19 22 18.1 22 17V12C22 10.9 21.1 10 20 10Z" /></svg>Rooms</li>
         <li class="menuitem" id="pricing1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Pricing</title><path fill="#fff" d="M7,15H9C9,16.08 10.37,17 12,17C13.63,17 15,16.08 15,15C15,13.9 13.96,13.5 11.76,12.97C9.64,12.44 7,11.78 7,9C7,7.21 8.47,5.69 10.5,5.18V3H13.5V5.18C15.53,5.69 17,7.21 17,9H15C15,7.92 13.63,7 12,7C10.37,7 9,7.92 9,9C9,10.1 10.04,10.5 12.24,11.03C14.36,11.56 17,12.22 17,15C17,16.79 15.53,18.31 13.5,18.82V21H10.5V18.82C8.47,18.31 7,16.79 7,15Z" /></svg>Pricing</li>
         <li class="menuitem" id="locations1" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Locations</title><path fill="#fff"  d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" /></svg>Locations</li>
