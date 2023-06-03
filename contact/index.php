@@ -1,5 +1,5 @@
 <?php
-$page_title = "Amenity | Room Rental System";
+$page_title = "Contact Us | Room Rental System";
 include("../include/header.php");
 ?>
 

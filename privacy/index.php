@@ -1,5 +1,5 @@
 <?php
-$page_title = "Landlords | Room Rental System";
+$page_title = "Privacy | Room Rental System";
 include("../include/header.php");
 ?>
 

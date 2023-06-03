@@ -1,8 +1,8 @@
 <?php
-$page_title = "Location | Room Rental System";
+$page_title = "Promos & Discounts | Room Rental System";
 include("../include/header.php");
 echo '<script>
-let element = document.getElementById("locations");
+let element = document.getElementById("promo");
 element.classList.add("active");
 </script>';
 ?>

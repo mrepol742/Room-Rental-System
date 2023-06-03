@@ -1,5 +1,5 @@
 <?php
-$page_title = "Chat with Us | Room Rental System";
+$page_title = "Support| Room Rental System";
 include("../include/header.php");
 ?>
 

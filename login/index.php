@@ -46,13 +46,13 @@ if (isLogin()) {
               <a class="nav-link" href="../categories">Categories</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../about">About</a>
+              <a class="nav-link" href="../locations">Locations</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../contactus">Contact Us</a>
+              <a class="nav-link" href="../promo">Promos & Discounts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../faq">Faq</a>
+              <a class="nav-link" href="../gallery">Gallery</a>
             </li>
             <li class="nav-item">
               <a class="nav-link hna" href="../create/">Create Account</a>
