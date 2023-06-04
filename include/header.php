@@ -20,7 +20,7 @@ if (!isLogin()) {
       <a class="nav-link" href="../rooms" id="rooms">Rooms</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../pricing" id="pricing">Pricing</a>
+      <a class="nav-link" href="../rates" id="rates">Rates</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="../categories" id="categories">Categories</a>
@@ -49,7 +49,7 @@ if (!isLogin()) {
       <a class="nav-link" href="../rooms">Rooms</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../pricing">Pricing</a>
+      <a class="nav-link" href="../rates">Rates</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="../categories">Categories</a>

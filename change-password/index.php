@@ -42,7 +42,7 @@ if (!isLogin()) {
               <a class="nav-link" href="../rooms">Rooms</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pricing">Pricing</a>
+              <a class="nav-link" href="../rates">rates</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../categories">Categories</a>

@@ -144,7 +144,17 @@ $session_action .= '<li><a class="dropdown-item" href="../change-password"><svg 
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="user-box-add">
+          <div class="row">
+              <div class="col-sm-6">
+              <img src="https://source.unsplash.com/1080x700?room" class="rounded img-fluid" width="250" >
+              </div>
+              <div class="col-sm-6">
+              <img src="https://source.unsplash.com/1080x700?bed" class="rounded img-fluid" width="250" >
+              </div>
+          </div>
+            <div class="row">
+              <div class="col-sm-6">
+              <div class="user-box-add">
               <select name="room">
                 <option value="premium">Premium Room</option>
                 <option value="deluxe">Deluxe Room</option>
@@ -152,11 +162,44 @@ $session_action .= '<li><a class="dropdown-item" href="../change-password"><svg 
                 <option value="regency">Regency</option>
               </select>
             </div>
-            <div class="user-box-add">
-              <input type="text" name="description" placeholder="Descripton" required>
+              </div>
+              <div class="col-sm-6">
+              <div class="user-box-add">
+              <select name="category">
+                <option value="queen">Queen</option>
+                <option value="king">King</option>
+                <option value="twin">Twin</option>
+                <option value="hollywood">Hollywood Twin</option>
+                <option value="double">Double-double</option>
+                <option value="studio">Studio</option>
+              </select>
             </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-6">
+              <div class="user-box-add">
+              <input type="number" name="rates" placeholder="Rates for 12 hours" required>
+            </div>
+              </div>
+              <div class="col-sm-6">
+              <div class="user-box-add">
+              <input type="number" name="rates" placeholder="Rates for 24 hours" required>
+            </div>
+              </div>
+            </div>
+            
             <div class="user-box-add">
-              <input type="number" name="price" placeholder="Price" required>
+              <input type="text" name="description" placeholder="Description" required>
+            </div>
+
+            <div class="user-box-add">
+              <input type="text" name="location" placeholder="Location" required>
+            </div>
+            
+            <div class="user-box-add">
+              <input type="number" name="promos" placeholder="Enter the amount to be deducted" required>
             </div>
           </div>
           <div class="modal-footer">

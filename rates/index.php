@@ -1,8 +1,8 @@
 <?php
-$page_title = "Pricing | Room Rental System";
+$page_title = "rates | Room Rental System";
 include("../include/header.php");
 echo '<script>
-let element = document.getElementById("pricing");
+let element = document.getElementById("rates");
 element.classList.add("active");
 </script>';
 ?>
