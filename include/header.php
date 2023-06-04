@@ -100,7 +100,6 @@ if (!isLogin()) {
         <?php echo $cllp; ?> 
       </div>
     </nav>
-
   <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarCanvas" aria-labelledby="sidebar">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="sidebarCanvas" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"> 
@@ -131,22 +130,22 @@ if (!isLogin()) {
           Privacy</li>
         <script>
           about.addEventListener('click', function() {
-            window.location.href = 'about';
+            window.location.href = '../about';
           });
           contact.addEventListener('click', function() {
-            window.location.href = 'contact';
+            window.location.href = '../contact';
           });
 
           support.addEventListener('click', function() {
-            window.location.href = 'support';
+            window.location.href = '../support';
           });
 
           faq.addEventListener('click', function() {
-            window.location.href = 'faq';
+            window.location.href = '../faq';
           });
 
           privacy.addEventListener('click', function() {
-            window.location.href = 'privacy';
+            window.location.href = '../privacy';
           });
         </script>
       </ul>

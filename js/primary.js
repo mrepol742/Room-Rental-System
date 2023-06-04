@@ -5,10 +5,11 @@ if ('serviceWorker' in navigator) {
       console.error('[ServiceWorker] failed: ', err)
     });
 }
+/*
             document.body.style.background = "url('./backgrounds/a" + (Math.floor(Math.random() * (12 - 1) ) + 1) + ".jpg') no-repeat fixed center";
             document.body.style.backgroundSize = "cover";
             document.body.style.transition = "all 1s ease";
-
+*/
             function showErr(err) {
                 let bsAlert = new  bootstrap.Toast(document.getElementById("error-toast"));
                 bsAlert.show();

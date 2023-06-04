@@ -106,7 +106,7 @@ if (!isLogin()) {
         </button>
         <?php echo $cllp; ?>
       </div>
-    </nav>
+    </nav> 
   <main>
   <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarCanvas" aria-labelledby="sidebar">
   <div class="offcanvas-header offcanvas-headerbg">
@@ -284,7 +284,7 @@ if (!isLogin()) {
     </div>
 </div>
 </main>
-  <footer class="footer mt-auto text-center">
+  <footer class="footer mt-auto text-center mt-4">
     <a href="#" style="padding-left: 2px; padding-right: 2px;" target="_blank">
       <svg style="width:24px;height:24px" viewBox="0 0 24 24">
         <title>Facebook</title>

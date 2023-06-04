@@ -1,5 +1,5 @@
 </section>
-<footer class="footer mt-auto text-center">
+<footer class="footer mt-5 text-center">
     <a href="#" style="padding-left: 2px; padding-right: 2px;" target="_blank">
       <svg style="width:24px;height:24px" viewBox="0 0 24 24">
         <title>Facebook</title>
@@ -60,10 +60,12 @@
       console.error('[ServiceWorker] failed: ', err)
     });
 }
+
+/*
             document.body.style.background = "url('../backgrounds/a" + (Math.floor(Math.random() * (12 - 1) ) + 1) + ".jpg') no-repeat fixed center";
             document.body.style.backgroundSize = "cover";
             document.body.style.transition = "all 1s ease";
-
+*/
             function showErr(err) {
                 let bsAlert = new  bootstrap.Toast(document.getElementById("error-toast"));
                 bsAlert.show();
