@@ -209,7 +209,6 @@ footer {
     padding: 20px;
 }
 
-
 .lux {
     margin-top: 8%;
     background-color: #fff;
@@ -288,4 +287,28 @@ footer {
     top: 0;
     right: 0;
     left: 0;
+}
+
+.user-box-add input, select {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background-color: #fff;
+    transition: all 1s ease;
+  }
+  
+  .user-box-add input:focus, select:focus{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  }
+
+  .modal-header, .modal-footer, .modal-content {
+    border: none;
+  }
+.modal-content {
+    padding: 2%;
+    border-radius: 20px;
 }

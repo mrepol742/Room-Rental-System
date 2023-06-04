@@ -12,4 +12,3 @@ include("../include/lorem.php");
 include("../include/footer.php");
 include("../include/connections.php");
 ?>
-

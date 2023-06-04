@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 20, 2023 at 05:02 PM
+-- Generation Time: Jun 04, 2023 at 04:51 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -33,6 +33,7 @@ CREATE TABLE `accounts` (
   `email` varchar(300) NOT NULL,
   `birthdate` varchar(300) NOT NULL,
   `user_password` varchar(300) NOT NULL,
+  `valid_id_num` int(11) NOT NULL,
   `is_landlord` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -40,67 +41,23 @@ CREATE TABLE `accounts` (
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`_id`, `user_name`, `email`, `birthdate`, `user_password`, `is_landlord`) VALUES
-(0, 'user', 'user@gmail.com', '2002-06-13', 'user', 1, 0);
-
-INSERT INTO `accounts` (`_id`, `user_name`, `email`, `birthdate`, `user_password`, `is_landlord`) VALUES
-(0, 'admin', 'admin@gmail.com', '2002-06-13', 'admin', 1, 1);
+INSERT INTO `accounts` (`_id`, `user_name`, `email`, `birthdate`, `user_password`, `valid_id_num`, `is_landlord`) VALUES
+(6, 'John Doe', 'user@gmail.com', '2002-06-23', 'user', 1, 0),
+(7, 'John Doe Admin', 'admin@gmail.com', '2004-02-23', 'admin', 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `price`
+-- Table structure for table `rooms`
 --
 
-CREATE TABLE `price` (
+CREATE TABLE `rooms` (
   `_id` int(11) NOT NULL,
-  `room_id` int(11) NOT NULL,
-  `price` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `rental`
---
-
-CREATE TABLE `rental` (
-  `_id` int(11) NOT NULL,
-  `room_id` int(11) NOT NULL,
-  `account_id` int(11) NOT NULL,
-  `tenant_id` int(11) NOT NULL,
-  `date_book` date NOT NULL,
-  `date_start` date NOT NULL,
-  `date_end` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `room`
---
-
-CREATE TABLE `room` (
-  `_id` int(11) NOT NULL,
-  `picture_url` varchar(300) NOT NULL,
-  `location` varchar(300) NOT NULL,
-  `tenant_id` int(11) NOT NULL,
-  `room_number` int(11) NOT NULL,
-  `is_available` tinyint(1) NOT NULL,
-  `price_id` int(11) NOT NULL,
-  `amnenity` varchar(300) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `valid_id`
---
-
-CREATE TABLE `valid_id` (
-  `_id` int(11) NOT NULL,
-  `type` varchar(300) NOT NULL,
-  `number` int(11) NOT NULL
+  `type` varchar(200) NOT NULL,
+  `description` varchar(5000) NOT NULL,
+  `location` varchar(5000) NOT NULL,
+  `categories` varchar(2000) NOT NULL,
+  `promos` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -114,27 +71,9 @@ ALTER TABLE `accounts`
   ADD PRIMARY KEY (`_id`);
 
 --
--- Indexes for table `price`
+-- Indexes for table `rooms`
 --
-ALTER TABLE `price`
-  ADD PRIMARY KEY (`_id`);
-
---
--- Indexes for table `rental`
---
-ALTER TABLE `rental`
-  ADD PRIMARY KEY (`_id`);
-
---
--- Indexes for table `room`
---
-ALTER TABLE `room`
-  ADD PRIMARY KEY (`_id`);
-
---
--- Indexes for table `valid_id`
---
-ALTER TABLE `valid_id`
+ALTER TABLE `rooms`
   ADD PRIMARY KEY (`_id`);
 
 --
@@ -145,30 +84,12 @@ ALTER TABLE `valid_id`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `price`
+-- AUTO_INCREMENT for table `rooms`
 --
-ALTER TABLE `price`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `rental`
---
-ALTER TABLE `rental`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `room`
---
-ALTER TABLE `room`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `valid_id`
---
-ALTER TABLE `valid_id`
+ALTER TABLE `rooms`
   MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
