@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 04, 2023 at 04:51 PM
+-- Generation Time: Jun 04, 2023 at 06:55 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -56,8 +56,10 @@ CREATE TABLE `rooms` (
   `type` varchar(200) NOT NULL,
   `description` varchar(5000) NOT NULL,
   `location` varchar(5000) NOT NULL,
-  `categories` varchar(2000) NOT NULL,
-  `promos` int(11) NOT NULL
+  `category` varchar(2000) NOT NULL,
+  `promo` int(11) NOT NULL,
+  `rate_12` int(11) NOT NULL,
+  `rate_24` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
