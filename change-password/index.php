@@ -30,8 +30,7 @@ if (!isLogin()) {
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="../">
-          <img src="../favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 25px !important;">
-          Room Rental System
+        Home
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="qwe111">
           <span class="navbar-toggler-icon" id="qwe"></span>
@@ -42,7 +41,7 @@ if (!isLogin()) {
               <a class="nav-link" href="../rooms">Rooms</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../rates">rates</a>
+              <a class="nav-link" href="../rates">Rates</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../categories">Categories</a>

@@ -46,22 +46,22 @@ if (!isLogin()) {
   $cllp = '<div class="collapse navbar-collapse" id="navbarText">
   <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
   <li class="nav-item">
-      <a class="nav-link" href="../rooms">Rooms</a>
+      <a class="nav-link" href="../rooms" id="rooms">Rooms</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../rates">Rates</a>
+      <a class="nav-link" href="../rates" id="rates">Rates</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../categories">Categories</a>
+      <a class="nav-link" href="../categories" id="categories">Categories</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../locations">Locations</a>
+      <a class="nav-link" href="../locations" id="locations">Locations</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../promo">Promos & Discounts</a>
+      <a class="nav-link" href="../promo" id="promo">Promos & Discounts</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../gallery">Gallery</a>
+      <a class="nav-link" href="../gallery" id="gallery">Gallery</a>
     </li>
   </ul>
 </div>';

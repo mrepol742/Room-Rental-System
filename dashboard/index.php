@@ -31,6 +31,80 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 }
 
+$isedit = '';
+if (isset($_GET['edit'])) {
+  echo $_GET["edit"];
+    $isedit = '<div class="modal fade show" id="editRoom" tabindex="-1" aria-labelledby="editRoomLabel" aria-hidden="false" style="display: block;">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <form action="<?php htmlspecialchars(\'php_self\'); ?>" method="post">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="editRoomLabel">Edit Room</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="https://source.unsplash.com/1080x700?room" class="rounded img-fluid" width="250" >
+            <div class="row">
+              <div class="col-sm-6">
+              <div class="user-box-add">
+              <select name="room" value="regency">
+                <option value="premium">Premium Room</option>
+                <option value="deluxe">Deluxe Room</option>
+                <option value="executive">Executive Room</option>
+                <option value="regency">Regency</option>
+              </select>
+            </div>
+              </div>
+              <div class="col-sm-6">
+              <div class="user-box-add">
+              <select name="category">
+                <option value="queen">Queen</option>
+                <option value="king">King</option>
+                <option value="twin">Twin</option>
+                <option value="hollywood">Hollywood Twin</option>
+                <option value="double">Double-double</option>
+                <option value="studio">Studio</option>
+              </select>
+            </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-6">
+              <div class="user-box-add">
+              <input type="number" name="rate_12" placeholder="Rate for 12 hours" value="' . $_GET["rate_12"] . '" required>
+            </div>
+              </div>
+              <div class="col-sm-6">
+              <div class="user-box-add">
+              <input type="number" name="rate_24" placeholder="Rate for 24 hours"  value="' . $_GET["rate_24"] . '" required>
+            </div>
+              </div>
+            </div>
+            
+            <div class="user-box-add">
+              <input type="text" name="description" placeholder="Description"  value="' . $_GET["description"] . '" required>
+            </div>
+
+            <div class="user-box-add">
+              <input type="text" name="location" placeholder="Location" value="' . $_GET["location"] . '" required>
+            </div>
+            
+            <div class="user-box-add">
+              <input type="number" name="promo" placeholder="Promo" value="' . $_GET["promo"] . '" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" name="newroom" value="newroom" class="btn btn-primary">Save changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>';
+}
+
 $sql = "SELECT * FROM rooms ORDER BY _id DESC";
 $result = $conn->query($sql);
 $mcontent = "";
@@ -40,12 +114,12 @@ if ($result->num_rows > 0) {
     '<div class="row">';
 
     while($row = $result->fetch_assoc()) {
-      $mcontent .= '<div class="col-sm-6">' .
+      $mcontent .= '<div class="col-sm-6 roomt">' .
       '<div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">' .
         '<div class="col mb-5">' .
           '<img class="rounded img-fluid shadow" src="https://source.unsplash.com/1080x700?room">' .
         '</div>' .
-        '<div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">' .
+        '<div class="col d-md-flex align-items-md-end align-items-lg-center">' .
           '<div>' .
             '<h5 class="fw-bold">' . $row["type"] . '</h5>' .
             '<p class="text-muted mb-0">' . $row["category"] . '</p>' .
@@ -53,10 +127,14 @@ if ($result->num_rows > 0) {
             '<p class="text-muted mb-0">' . $row["rate_12"] . '$ 12hrs | ' . $row["rate_24"] . '$ 24hrs per Night</p>' .
             '<p class="text-muted mb-0">' . $row["location"] . '</p>';
             $mcontent .= '<br>' .
-            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 30px; margin: 5px;">' .
+            '<a href="?edit=1&_id=' . $row["_id"]. '&type=' . $row["type"] . '&category=' . $row["category"] . 
+            '&description=' . $row["description"] . '&rate_12=' . $row["rate_12"] . '&rate_24=' . $row["rate_24"] .
+            '&location=' . $row["location"] . '&promo=' . $row["promo"] . '">' .
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 30px; margin: 5px;">' .
               '<title>Edit</title>' .
               '<path fill="#4285f4" d="M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M15.1,7.07C15.24,7.07 15.38,7.12 15.5,7.23L16.77,8.5C17,8.72 17,9.07 16.77,9.28L15.77,10.28L13.72,8.23L14.72,7.23C14.82,7.12 14.96,7.07 15.1,7.07M13.13,8.81L15.19,10.87L9.13,16.93H7.07V14.87L13.13,8.81Z" />' .
             '</svg>' .
+            '</a>' .
             '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 30px; margin: 5px;">' .
               '<title>Delete</title>' .
               '<path fill="#4285f4" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />' .
@@ -224,6 +302,9 @@ function getCategory($category) {
       </ul>
     </div>
   </div>
+  <?php 
+  echo $isedit;
+  ?>
   <div class="modal fade" id="addRoom" tabindex="-1" aria-labelledby="addRoomLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">

@@ -26,22 +26,23 @@ if (isLogin()) {
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="autohide navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../">
-          <img src="../favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 25px !important;">
-          Room Rental System
-        </a>
+        <div class="navbar-brand">
+          <a class="navbar-brand1" href="/Room-Rental-System/">
+            Home
+          </a>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="qwe111">
           <span class="navbar-toggler-icon" id="qwe"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarText">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-auto text-md-center text-left">
             <li class="nav-item">
               <a class="nav-link" href="../rooms">Rooms</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../rates">rates</a>
+              <a class="nav-link" href="../rates">Rates</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../categories">Categories</a>
@@ -55,6 +56,8 @@ if (isLogin()) {
             <li class="nav-item">
               <a class="nav-link" href="../gallery">Gallery</a>
             </li>
+          </ul>
+          <ul class="nav navbar-nav justify-content-md-center justify-content-start flex-nowrap">
             <li class="nav-item">
               <a class="nav-link hna" href="../create/">Create Account</a>
             </li>

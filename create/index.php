@@ -26,42 +26,45 @@ if (isLogin()) {
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../">
-          <img src="../favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 25px !important;">
-          Room Rental System
+  <nav class="autohide navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-brand">
+          <a class="navbar-brand1" href="/Room-Rental-System/">
+          Home
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="qwe111">
-          <span class="navbar-toggler-icon black" id="qwe"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="../rooms">Rooms</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../rates">rates</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../categories">Categories</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../locations">Locations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../promo">Promos & Discounts</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../gallery">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link hna" href="../login/">Log in</a>
-            </li>
-          </ul>
-        </div>
       </div>
-    </nav>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="qwe111">
+        <span class="navbar-toggler-icon" id="qwe"></span>
+      </button>
+   <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarText">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-auto text-md-center text-left">
+  <li class="nav-item">
+      <a class="nav-link" href="../rooms">Rooms</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../rates">Rates</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../categories">Categories</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../locations">Locations</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../promo">Promos & Discounts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../gallery">Gallery</a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav justify-content-md-center justify-content-start flex-nowrap">
+  <li class="nav-item">
+  <a class="nav-link hna" href="../login/">Login</a>
+  </li>
+  </ul>
+</div>
+    </div>
+  </nav>
   </header>
   <div class="login-box">
     <h1> <img src="../favicon.png" alt="Logo" width="24" class="d-inline-block align-text-top" style="width: 40px !important;">Create Account</h1>

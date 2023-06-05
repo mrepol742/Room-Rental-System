@@ -16,7 +16,7 @@ if ($result->num_rows > 0) {
     '<div class="row">';
 
     while($row = $result->fetch_assoc()) {
-      $mcontent .= '<div class="col-sm-6">' .
+      $mcontent .= '<div class="col-sm-6 roomt">' .
       '<div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">' .
         '<div class="col mb-5">' .
           '<img class="rounded img-fluid shadow" src="https://source.unsplash.com/1080x700?room">' .

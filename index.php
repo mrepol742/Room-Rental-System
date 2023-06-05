@@ -186,17 +186,17 @@ if (!isLogin()) {
       </div>
     </div>
     <header>
-      <div class="card mb-3 first" style="border-radius: 0px; padding-bottom: 15%;">
+      <div class="card mb-3 first" style="border-radius: 0px; padding-bottom: 15%;" id="bgbg">
         <div class="row g-0">
           <div class="col-md-4">
             <img loading="lazy" src="backgrounds/a1.jpg" class="rounded mx-auto d-block img-fluid" alt="Logo" width="500">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h1 class="card-title">Why us?</h1>
+              <h1 class="card-title">Lorem ipsum dolor</h1>
               <p class="card-text">
-                Rent a room easier and more convenient. We provides a secure and reliable platform to search for and book rooms, as well as manage their rental payments. Our system also offers a variety of features that make it easier to find the perfect room for your needs, such as detailed descriptions of each room, photos, and reviews from other users. Additionally, our system is designed to be user-friendly and easy to navigate, so you can quickly find the room you need.
-              </p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.
+            <br><br>Donec imperdiet orci ac est molestie pretium. Integer vitae vulputate libero. Sed vulputate et diam eu aliquet. </p>
             </div>
           </div>
         </div>
@@ -358,6 +358,10 @@ if (!isLogin()) {
       });
 
     });
+
+    bgbg.style.background = "url('backgrounds/a" + (Math.floor(Math.random() * (12 - 1) ) + 1) + ".jpg') no-repeat fixed center";
+    bgbg.style.backgroundSize = "cover";
+    bgbg.style.transition = "all 1s ease";
   </script>
 </body>
 
