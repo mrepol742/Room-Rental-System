@@ -17,6 +17,7 @@ $session_action .= '<li><a class="dropdown-item" href="../change-password"><svg 
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
   if (isset($_POST["newroom"])) {
     $room = getRoom($_POST["room"]);
     $category = getCategory($_POST["category"]);
@@ -28,6 +29,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "INSERT INTO rooms (type, description, location, category, promo, rate_12, rate_24) VALUES ('$room', '$description', '$location', '$category', '$promo', '$rate_12', '$rate_24')";
     $conn->query($sql);
+    
+  } else if (isset($_POST["editroom"])) {
+    $room = getRoom($_GET["room"]);
+    $category = getCategory($_GET["category"]);
+    $rate_12 = (int) $_GET["rate_12"];
+    $rate_24 = (int) $_GET["rate_24"];
+    $description = $_GET["description"];
+    $location = $_GET["location"];
+    $promo = (int) $_GET["promo"];
+echo $room;
+  //  $sql = "UPDATE rooms SET type='$room', description='$description', location='$location', category='$category', promo='$promo', rate_12='$rate_12', rate_24='rate_24' WHERE _id = ";
+  //  $conn->query($sql);
   }
 }
 
@@ -36,7 +49,7 @@ if (isset($_GET['edit'])) {
   $isedit = '<div class="modal fade" id="editRoom" tabindex="-1" aria-labelledby="editRoomLabel" aria-hidden="false">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
-        <form action="<?php htmlspecialchars(\'php_self\'); ?>" method="post">
+        <form action method="post">
 
           <div class="modal-header">
             <h5 class="modal-title" id="editRoomLabel">Edit Room</h5>
