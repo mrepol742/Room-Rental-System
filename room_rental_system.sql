@@ -42,8 +42,29 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`_id`, `user_name`, `email`, `birthdate`, `user_password`, `valid_id_num`, `is_landlord`) VALUES
-(6, 'John Doe', 'user@gmail.com', '2002-06-23', 'user', 1, 0),
-(7, 'John Doe Admin', 'admin@gmail.com', '2004-02-23', 'admin', 1, 1);
+(1, 'John Doe', 'user@gmail.com', '2002-06-23', 'user', 1, 0),
+(2, 'John Doe Admin', 'admin@gmail.com', '2004-02-23', 'admin', 1, 1);
+
+--
+-- Dumping data for table `rooms`
+--
+
+INSERT INTO `rooms` (`_id`, `type`, `description`, `location`, `category`, `promo`, `rate_12`, `rate_24`) VALUES
+(1, 'Regency', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Queen', 0, 20, 22),
+(2, 'Premium Room', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Queen', 0, 7, 7),
+(3, 'Regency', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Studio', 0, 23, 34),
+(4, 'Deluxe Room', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Studio', 0, 23, 34),
+(5, 'Regency', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Studio', 0, 23, 34),
+(6, 'Regency', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Studio', 0, 23, 34),
+(7, 'Executive Room', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Hollywood Twin', 0, 22, 23),
+(8, 'Deluxe Room', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Hollywood Twin', 0, 22, 25),
+(9, 'Executive Room', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Hollywood Twin', 0, 22, 25),
+(10, 'Deluxe Room', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Hollywood Twin', 0, 22, 26),
+(11, 'Executive Room', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Hollywood Twin', 0, 22, 25),
+(12, 'Executive Room', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Hollywood Twin', 0, 22, 27),
+(13, 'Deluxe Room', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York  gr rt', 'Double-double', 0, 22, 45),
+(14, 'Premium Room', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Queen', 0, 5, 53),
+(15, 'Deluxe Room', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Double-double', 0, 23, 23);
 
 -- --------------------------------------------------------
 
