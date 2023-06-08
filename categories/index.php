@@ -7,8 +7,18 @@ let element = document.getElementById("categories");
 element.classList.add("active");
 </script>';
 
-$sql = "SELECT * FROM rooms ORDER BY category DESC";
-$result = $conn->query($sql);
+function getDefQ()
+{
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST["search"])) {
+      $search = $_POST["search"];
+      return "SELECT * FROM rooms WHERE type='$search' OR category='$search' OR description='$search' OR location='$search' OR rate_12='$search' OR rate_24='$search' OR promo='$search'";
+    }
+  }
+  return "SELECT * FROM rooms ORDER BY category DESC";
+}
+
+$result = $conn->query(getDefQ());
 $mcontent = "";
 if ($result->num_rows > 0) {
     $mcontent .= '<section>' .
