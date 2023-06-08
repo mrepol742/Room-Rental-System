@@ -80,7 +80,6 @@ nav {
 }
 
 @media (max-width:1080px) {
-
     nav {
         z-index: 9999;
     }
@@ -316,7 +315,7 @@ footer {
   .modal-header, .modal-footer, .modal-content {
     border: none;
   }
-  
+
 .modal-content {
     padding: 2%;
     border-radius: 20px;
@@ -348,15 +347,53 @@ input:-webkit-autofill:active {
 }
 
 .roomt {
-    padding: 4%;
+    padding: 3%;
 }
 
 .roomt:hover, .roomt:focus {
-    background-color: #4286f433;
-    transition: all 0.5s ease;
-    border-radius: 10px;
+    background-color: #4286f41f;
+    transition: all 1s ease;
+    border-radius: 7px;
 }
 
 .text-muted {
     font-size: 1.1em;
+}
+
+#search {
+    border-width: 0px;
+    width: 100%;
+    color: #212121;
+    padding-left: 20px;
+    padding-right: 0px;
+    height: 40px;
+    font-size: 14px;
+    background-color: transparent;
+    outline: none;
+}
+
+#search::placeholder {
+    color:#484848;
+}
+
+.search-container {
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    background: #e0dddd;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+
+.search-container:hover {
+    background: #4286f45d;
+    transition: all 0.5s ease;
+}
+
+.search-container>svg {
+    height: 24px;
+    min-width: 70px;
+    align-self: center;
+    color: #212121;
 }

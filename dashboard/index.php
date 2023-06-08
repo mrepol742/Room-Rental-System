@@ -156,8 +156,17 @@ if (isset($_GET['edit'])) {
   </script>';
 }
 
-$sql = "SELECT * FROM rooms ORDER BY _id DESC";
-$result = $conn->query($sql);
+function getDefQ() {
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST["search"])) {
+      $search = $_POST["search"];
+     return "SELECT * FROM rooms WHERE type='$search' OR category='$search' OR description='$search' OR location='$search' OR rate_12='$search' OR rate_24='$search' OR promo='$search'";
+    }
+  }
+  return "SELECT * FROM rooms ORDER BY _id DESC";
+}
+
+$result = $conn->query(getDefQ());
 $mcontent = "";
 if ($result->num_rows > 0) {
   $mcontent .= '<section>' .
@@ -272,9 +281,22 @@ function getCategory($category)
       </button>
       <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarText">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-auto text-md-center text-left">
-
+        
         </ul>
         <ul class="nav navbar-nav justify-content-md-center justify-content-start flex-nowrap">
+        <li class="nav-item">
+          <form action method="post">
+          <div class="search-container">
+        <input id="search" placeholder="What are you looking for?" type="text" name="search">
+        <svg viewBox="0 0 24 24" id="but">
+          <path fill="#484848"
+            d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z">
+          </path>
+        </svg>
+      </div>
+          </form>
+         </li>
+         <br>
           <li class="nav-item">
             <button class="nav-link hna" type="button" data-bs-toggle="modal" data-bs-target="#addRoom">Add Room</button>
           </li>
