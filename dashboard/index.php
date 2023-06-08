@@ -323,6 +323,9 @@ function getCategory($category)
     </div>
     <div class="offcanvas-body">
       <ul class="menu">
+        <li class="menuitem" id="home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Home</title><path fill="#fff" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg>
+       Home </li>
         <li class="menuitem" id="about">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;">
             <title>About</title>
@@ -359,6 +362,9 @@ function getCategory($category)
           Privacy
         </li>
         <script>
+           home.addEventListener('click', function() {
+            window.location.href = '../';
+          });
           about.addEventListener('click', function() {
             window.location.href = '../about';
           });
@@ -455,7 +461,7 @@ function getCategory($category)
 
   <?php echo $mcontent; ?>
 
-  <footer class="footer mt-5 text-center">
+  <footer class="footer mt-auto mt-4 text-center">
     <a href="#" style="padding-left: 2px; padding-right: 2px;" target="_blank">
       <svg style="width:24px;height:24px" viewBox="0 0 24 24">
         <title>Facebook</title>

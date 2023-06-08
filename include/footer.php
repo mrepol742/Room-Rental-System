@@ -1,5 +1,5 @@
 </section>
-<footer class="footer mt-5 text-center">
+<footer class="footer mt-auto  mt-4 text-center">
   <a href="#" style="padding-left: 2px; padding-right: 2px;" target="_blank">
     <svg style="width:24px;height:24px" viewBox="0 0 24 24">
       <title>Facebook</title>

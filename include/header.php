@@ -132,6 +132,9 @@ if (!isLogin()) {
     </div>
     <div class="offcanvas-body">
       <ul class="menu">
+      <li class="menuitem" id="home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;"><title>Home</title><path fill="#fff" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" /></svg>
+       Home </li>
         <li class="menuitem" id="about">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 26px; margin-right: 10px;">
             <title>About</title>
@@ -168,6 +171,9 @@ if (!isLogin()) {
           Privacy
         </li>
         <script>
+           home.addEventListener('click', function() {
+            window.location.href = '../';
+          });
           about.addEventListener('click', function() {
             window.location.href = '../about';
           });

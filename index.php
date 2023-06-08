@@ -204,7 +204,7 @@ if (!isLogin()) {
             <img loading="lazy" src="backgrounds/a1.jpg" class="rounded mx-auto d-block img-fluid" alt="Logo" width="500">
           </div>
           <div class="col-md-8">
-            <div class="card-body">
+            <div class="card-body"> 
               <h1 class="card-title">Lorem ipsum dolor</h1>
               <p class="card-text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.
