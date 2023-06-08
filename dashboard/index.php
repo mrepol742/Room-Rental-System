@@ -29,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "INSERT INTO rooms (type, description, location, category, promo, rate_12, rate_24) VALUES ('$room', '$description', '$location', '$category', '$promo', '$rate_12', '$rate_24')";
     $conn->query($sql);
-
   } else if (isset($_POST["editroom"])) {
     $room = getRoom($_POST["room"]);
     $category = getCategory($_POST["category"]);
@@ -39,6 +38,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $location = $_POST["location"];
     $promo = (int) $_POST["promo"];
     $sql = "UPDATE rooms SET type='$room', description='$description', location='$location', category='$category', promo='$promo', rate_12='$rate_12', rate_24='$rate_24' WHERE _id='" . $_POST["_id"] . "'";
+    $conn->query($sql);
+    header("Location: /Room-Rental-System/dashboard/");
+  } else if (isset($_POST["delroom"])) {
+    $_id = $_POST["_id"];
+    $sql = "DELETE FROM rooms WHERE _id='$_id'";
     $conn->query($sql);
     header("Location: /Room-Rental-System/dashboard/");
   }
@@ -53,7 +57,6 @@ if (isset($_GET['edit'])) {
 
           <div class="modal-header">
             <h5 class="modal-title" id="editRoomLabel">Edit Room</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <img src="https://source.unsplash.com/1080x700?room" class="rounded img-fluid" width="250" >
@@ -123,6 +126,34 @@ if (isset($_GET['edit'])) {
   myModal.toggle();
 });
   </script>';
+} else if (isset($_GET['del'])) {
+  $isedit = '
+  <div class="modal fade" id="delRoom" tabindex="-1" aria-labelledby="delRoomLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+    <form action method="post">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="delRoomLabel">Confirmation</h1>
+      </div>
+      <div class="modal-body">
+        Do you really want to delete this room?
+      </div>
+      <input type="number" name="_id" value="' . $_GET["_id"] . '" style="display: none;">
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <button type="submit" name="delroom" value="delroom" class="btn btn-primary">Yes</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>';
+  echo '<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  var myModal = new bootstrap.Modal(document.getElementById(\'delRoom\'), {
+  })
+  myModal.toggle();
+});
+  </script>';
 }
 
 $sql = "SELECT * FROM rooms ORDER BY _id DESC";
@@ -149,10 +180,10 @@ if ($result->num_rows > 0) {
       '<path fill="#4285f4" d="M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M15.1,7.07C15.24,7.07 15.38,7.12 15.5,7.23L16.77,8.5C17,8.72 17,9.07 16.77,9.28L15.77,10.28L13.72,8.23L14.72,7.23C14.82,7.12 14.96,7.07 15.1,7.07M13.13,8.81L15.19,10.87L9.13,16.93H7.07V14.87L13.13,8.81Z" />' .
       '</svg>' .
       '</a>' .
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 25px; margin: 2px;">' .
+      '<a href="?del=1&_id=' . $row["_id"] . '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 25px; margin: 2px;">' .
       '<title>Delete</title>' .
       '<path fill="#4285f4" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />' .
-      '</svg>' . '</h3>' .
+      '</svg></a>' . '</h3>' .
       '<p class="text-muted mb-0">• ' . $row["category"] . '</p>' .
       //  '<p class="text-muted mb-0">• ' . $row["description"] . '</p>' .
       '<p class="text-muted mb-0">• ' . $row["rate_12"] . '$ per 12 hours</p>' .
@@ -338,7 +369,6 @@ function getCategory($category)
 
           <div class="modal-header">
             <h5 class="modal-title" id="addRoomLabel">Add Room</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <img src="https://source.unsplash.com/1080x700?room" class="rounded img-fluid" width="250">
