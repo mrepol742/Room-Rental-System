@@ -45,6 +45,23 @@ INSERT INTO `accounts` (`_id`, `user_name`, `email`, `birthdate`, `user_password
 (1, 'John Doe', 'user@gmail.com', '2002-06-23', 'user', 1, 0),
 (2, 'John Doe Admin', 'admin@gmail.com', '2004-02-23', 'admin', 1, 1);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rooms`
+--
+
+CREATE TABLE `rooms` (
+  `_id` int(11) NOT NULL,
+  `type` varchar(200) NOT NULL,
+  `description` varchar(5000) NOT NULL,
+  `location` varchar(5000) NOT NULL,
+  `category` varchar(2000) NOT NULL,
+  `promo` int(11) NOT NULL,
+  `rate_12` int(11) NOT NULL,
+  `rate_24` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Dumping data for table `rooms`
 --
@@ -66,26 +83,6 @@ INSERT INTO `rooms` (`_id`, `type`, `description`, `location`, `category`, `prom
 (14, 'Premium Room', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Queen', 0, 5, 53),
 (15, 'Deluxe Room', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis neque id libero bibendum posuere a ut nunc. Nam egestas dictum velit, eu lacinia nulla ultricies nec.', 'New York', 'Double-double', 0, 23, 23);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `rooms`
---
-
-CREATE TABLE `rooms` (
-  `_id` int(11) NOT NULL,
-  `type` varchar(200) NOT NULL,
-  `description` varchar(5000) NOT NULL,
-  `location` varchar(5000) NOT NULL,
-  `category` varchar(2000) NOT NULL,
-  `promo` int(11) NOT NULL,
-  `rate_12` int(11) NOT NULL,
-  `rate_24` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Indexes for dumped tables
---
 
 --
 -- Indexes for table `accounts`

@@ -29,18 +29,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $sql = "INSERT INTO rooms (type, description, location, category, promo, rate_12, rate_24) VALUES ('$room', '$description', '$location', '$category', '$promo', '$rate_12', '$rate_24')";
     $conn->query($sql);
-    
+
   } else if (isset($_POST["editroom"])) {
-    $room = getRoom($_GET["room"]);
-    $category = getCategory($_GET["category"]);
-    $rate_12 = (int) $_GET["rate_12"];
-    $rate_24 = (int) $_GET["rate_24"];
-    $description = $_GET["description"];
-    $location = $_GET["location"];
-    $promo = (int) $_GET["promo"];
-echo $room;
-  //  $sql = "UPDATE rooms SET type='$room', description='$description', location='$location', category='$category', promo='$promo', rate_12='$rate_12', rate_24='rate_24' WHERE _id = ";
-  //  $conn->query($sql);
+    $room = getRoom($_POST["room"]);
+    $category = getCategory($_POST["category"]);
+    $rate_12 = (int) $_POST["rate_12"];
+    $rate_24 = (int) $_POST["rate_24"];
+    $description = $_POST["description"];
+    $location = $_POST["location"];
+    $promo = (int) $_POST["promo"];
+    $sql = "UPDATE rooms SET type='$room', description='$description', location='$location', category='$category', promo='$promo', rate_12='$rate_12', rate_24='$rate_24' WHERE _id='" . $_POST["_id"] . "'";
+    $conn->query($sql);
+    header("Location: /Room-Rental-System/dashboard/");
   }
 }
 
@@ -70,7 +70,7 @@ if (isset($_GET['edit'])) {
               </div>
               <div class="col-sm-6">
               <div class="user-box-add">
-              <select name="category">
+              <select name="category" value="queen">
                 <option value="queen">Queen</option>
                 <option value="king">King</option>
                 <option value="twin">Twin</option>
@@ -106,6 +106,7 @@ if (isset($_GET['edit'])) {
             <div class="user-box-add">
               <input type="number" name="promo" placeholder="Promo" value="' . $_GET["promo"] . '" required>
             </div>
+            <input type="number" name="_id" value="' . $_GET["_id"] . '" style="display: none;">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
